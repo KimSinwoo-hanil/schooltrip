@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수학여행 사전 안전교육 9차시 - 지역 사회 및 공공 예절</title>
+  <style>
+    :root {
+      --main: #1f6f5b;
+      --sub: #eefaf6;
+      --accent: #38bdf8;
+      --danger: #b91c1c;
+      --safe: #0f766e;
+      --civic: #2563eb;
+      --nature: #16a34a;
+      --gray: #f6f7f9;
+      --text: #222;
+      --line: #d9e2ec;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eefaf6 0%, #ffffff 42%);
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 24px 60px;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #1f6f5b, #38bdf8);
+      color: white;
+      border-radius: 24px;
+      padding: 38px 36px;
+      box-shadow: 0 14px 35px rgba(31, 111, 91, 0.24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "🌊 🌿 🤝";
+      position: absolute;
+      right: 28px;
+      bottom: 18px;
+      font-size: 52px;
+      opacity: 0.28;
+      letter-spacing: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 12px;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+
+    .info-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    section {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(35, 55, 80, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--main);
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      border-left: 7px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #145241;
+      font-size: 19px;
+    }
+
+    p { margin: 8px 0; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 6px 0; }
+
+    .highlight {
+      background: #e0f7ff;
+      border-left: 5px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin: 14px 0;
+      font-weight: 700;
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 14px;
+      background: var(--sub);
+      border: 1px solid #bbf7d0;
+      border-radius: 18px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .principle-label {
+      font-weight: 900;
+      color: white;
+      background: var(--main);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 78px;
+      padding: 8px;
+    }
+
+    .danger-label { background: var(--danger); }
+    .safe-label { background: var(--safe); }
+    .civic-label { background: var(--civic); }
+    .nature-label { background: var(--nature); }
+
+    .principle-body b { color: #145241; }
+
+    .danger-box {
+      border: 1px solid #f2b4b4;
+      background: #fff1f1;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .danger-box b { color: var(--danger); }
+
+    .safe-box {
+      border: 1px solid #b9e6df;
+      background: #effbf9;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .safe-box b { color: #13766d; }
+
+    .civic-box {
+      border: 2px solid #bfdbfe;
+      background: #eff6ff;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .nature-box {
+      border: 2px solid #bbf7d0;
+      background: #f0fdf4;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .activity {
+      background: var(--gray);
+      border: 1px dashed #aab7c4;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 16px 0;
+    }
+
+    .long-blank {
+      display: block;
+      min-height: 72px;
+      border: 1px solid #c7d0da;
+      background: white;
+      border-radius: 12px;
+      margin-top: 8px;
+      padding: 10px;
+    }
+
+    .short-blank {
+      display: inline-block;
+      min-width: 130px;
+      border-bottom: 2px solid #555;
+      height: 1.2em;
+      vertical-align: baseline;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      font-size: 15px;
+    }
+
+    th {
+      background: #1f6f5b;
+      color: white;
+      padding: 11px;
+      border: 1px solid #1f6f5b;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid #d5dde6;
+      padding: 11px;
+      vertical-align: top;
+    }
+
+    .center { text-align: center; }
+
+    .small {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .scenario {
+      border: 1px solid #d9e2ec;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 14px 0;
+      background: #ffffff;
+    }
+
+    .scenario-title {
+      font-weight: 900;
+      color: var(--main);
+      margin-bottom: 6px;
+    }
+
+    .quiz { counter-reset: q; }
+
+    .quiz-item {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid #d9e2ec;
+      background: #ffffff;
+    }
+
+    .quiz-item::before {
+      counter-increment: q;
+      content: "문제 " counter(q);
+      display: inline-block;
+      background: var(--accent);
+      color: #222;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .answer {
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .pledge {
+      background: linear-gradient(135deg, #eefaf6, #ffffff);
+      border: 2px solid #38bdf8;
+      border-radius: 20px;
+      padding: 22px;
+      font-weight: 600;
+    }
+
+    .signature {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .signature span {
+      min-width: 170px;
+      border-bottom: 1px solid #333;
+      display: inline-block;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { max-width: none; padding: 0; }
+      section, .cover { box-shadow: none; break-inside: avoid; }
+      .cover, th, .principle-label {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .info-grid { grid-template-columns: repeat(2, 1fr); }
+      .principle { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cover">
+      <div class="badge">수학여행 사전 안전교육 9차시</div>
+      <h1>Ⅸ. 지역 사회 및 공공 예절</h1>
+      <p class="subtitle">제주특별자치도를 방문하는 학생으로서 지켜야 할 민주시민의 책임</p>
+
+      <div class="info-grid">
+      </div>
+    </header>
+
+    <section>
+      <h2>1. 지역 사회 예절이 중요한 이유</h2>
+      <p>수학여행은 학생들이 학교 밖에서 배우는 중요한 교육 활동이다. 우리는 제주특별자치도를 방문하는 관광객이지만, 동시에 학교의 이름을 달고 움직이는 학생이며, 지역 사회를 존중해야 하는 민주시민이다.</p>
+
+      <div class="highlight">
+        지역 사회 및 공공 예절의 핵심은 “내가 머무는 공간은 누군가의 삶의 터전이며, 나의 행동은 학교의 모습으로 보인다”는 책임 의식이다.
+      </div>
+
+      <h3>공공 예절을 지켜야 하는 이유</h3>
+      <ul>
+        <li>제주 지역 주민의 일상과 생활 공간을 존중하기 위해서이다.</li>
+        <li>관광지, 식당, 숙소, 공항, 박물관, 자연환경을 함께 사용하는 사람들에게 피해를 주지 않기 위해서이다.</li>
+        <li>우리 학교 학생들의 태도가 학교의 명예와 신뢰로 연결되기 때문이다.</li>
+        <li>공공장소에서의 소음, 쓰레기, 무질서한 행동은 다른 사람의 권리를 침해할 수 있기 때문이다.</li>
+        <li>민주시민은 자유롭게 행동하되, 공동체의 규칙과 타인의 권리를 함께 존중해야 하기 때문이다.</li>
+      </ul>
+
+      <div class="civic-box">
+        <h3>민주시민으로서의 수학여행</h3>
+        <p>민주시민은 법과 규칙을 억지로 지키는 사람이 아니라, 다른 사람과 함께 살아가는 공간에서 스스로 책임 있게 행동하는 사람이다. 수학여행에서의 공공 예절은 교실 밖에서 실천하는 시민교육이다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 공공장소에서 소음과 소란 자제</h2>
+
+      <div class="principle">
+        <div class="principle-label civic-label">원칙 1<br>소음 자제</div>
+        <div class="principle-body">
+          <b>공공장소에서는 큰 소리, 뛰기, 장난, 단체 소란을 자제한다.</b>
+          <p>수학여행 중에는 친구들과 함께 있어 들뜨기 쉽다. 그러나 공항, 식당, 숙소, 관광지, 박물관, 기념관, 대중교통 공간은 우리만 사용하는 곳이 아니다.</p>
+        </div>
+      </div>
+
+      <h3>소음과 소란이 되는 행동</h3>
+      <ul>
+        <li>공항, 식당, 로비, 복도에서 큰 소리로 떠들기</li>
+        <li>관람 장소에서 뛰거나 장난치기</li>
+        <li>단체로 노래를 부르거나 구호를 외치기</li>
+        <li>버스 승하차 장소에서 줄을 흐트러뜨리고 소란스럽게 움직이기</li>
+        <li>휴대폰 영상, 음악, 게임 소리를 크게 틀기</li>
+        <li>사진을 찍으며 주변 사람의 이동을 방해하기</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>학교의 명예를 생각해야 합니다</b>
+        <p>수학여행 중 학생들의 말투, 줄 서는 모습, 소리 크기, 쓰레기 처리, 직원 응대 태도는 모두 학교의 이미지가 된다. 한 학생의 행동이 “그 학교 학생들은 예의가 없다”는 평가로 이어질 수 있다.</p>
+      </div>
+
+      <div class="safe-box">
+        <b>공공장소 말소리 기준</b>
+        <p>친구와 가까이 있을 때만 들릴 정도의 목소리로 말한다. 넓은 공간에서 멀리 있는 친구를 큰 소리로 부르지 말고, 가까이 가서 말하거나 메시지를 활용한다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 1. 소음 상황 바꾸기</h3>
+        <p>다음 행동을 공공 예절에 맞게 바꾸어 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>문제가 되는 행동</th>
+              <th>공공 예절에 맞는 행동</th>
+            </tr>
+            <tr>
+              <td>공항 대기 중 친구를 멀리서 큰 소리로 부른다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>박물관 복도에서 친구들과 뛰며 장난친다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>식당에서 단체로 큰 소리로 웃고 떠든다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>숙소 로비에서 음악을 크게 틀어 놓는다.</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 쓰레기 무단 투기 금지</h2>
+
+      <div class="principle">
+        <div class="principle-label nature-label">원칙 2<br>쓰레기 금지</div>
+        <div class="principle-body">
+          <b>쓰레기는 절대 아무 곳에나 버리지 않고, 정해진 장소에 분리하여 배출한다.</b>
+          <p>제주는 아름다운 자연환경과 관광자원을 가진 지역이다. 작은 쓰레기 하나도 바람에 날려 바다, 오름, 숲, 길가로 이동할 수 있으며, 지역 주민과 환경에 피해를 줄 수 있다.</p>
+        </div>
+      </div>
+
+      <h3>무단 투기에 해당하는 행동</h3>
+      <ul>
+        <li>과자 봉지, 음료 컵, 빨대, 물티슈를 길가에 버리는 행동</li>
+        <li>버스 좌석, 숙소 객실, 식당 테이블에 쓰레기를 두고 가는 행동</li>
+        <li>관광지나 해변에서 사진을 찍은 뒤 쓰레기를 남기고 떠나는 행동</li>
+        <li>분리배출 장소가 있는데도 아무 통에나 버리는 행동</li>
+        <li>“작은 쓰레기니까 괜찮다”고 생각하고 버리는 행동</li>
+        <li>친구가 버린 쓰레기를 보고도 모른 척하는 행동</li>
+      </ul>
+
+      <div class="nature-box">
+        <h3>제주에서 특히 기억할 점</h3>
+        <p>제주의 바람, 해안, 오름, 숲은 아름다운 관광 자원이자 지역 주민의 삶과 연결된 공간이다. 우리가 남긴 쓰레기는 단순한 흔적이 아니라 제주 자연과 지역 사회에 부담이 된다.</p>
+      </div>
+
+      <div class="safe-box">
+        <b>쓰레기 관리 4원칙</b>
+        <ol>
+          <li><b>줄이기</b>: 불필요한 포장과 일회용품 사용을 줄인다.</li>
+          <li><b>가지고 있기</b>: 쓰레기통이 없으면 가방에 넣어 둔다.</li>
+          <li><b>분리하기</b>: 재활용품, 일반 쓰레기, 음식물 쓰레기를 구분한다.</li>
+          <li><b>확인하기</b>: 자리를 떠나기 전 내 주변에 쓰레기가 없는지 확인한다.</li>
+        </ol>
+      </div>
+
+      <div class="activity">
+        <h3>활동 2. 나의 쓰레기 관리 계획</h3>
+        <p>수학여행 중 쓰레기를 줄이고 바르게 처리하기 위해 내가 실천할 행동을 3가지 써 봅시다.</p>
+        <p>① <span class="short-blank"></span></p>
+        <p>② <span class="short-blank"></span></p>
+        <p>③ <span class="short-blank"></span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 지역 주민 존중하기</h2>
+
+      <div class="principle">
+        <div class="principle-label civic-label">원칙 3<br>주민 존중</div>
+        <div class="principle-body">
+          <b>제주 지역 주민의 일상과 생활 공간을 존중한다.</b>
+          <p>우리가 방문하는 곳은 관광지이지만, 동시에 누군가에게는 집 앞, 출근길, 일터, 생활 공간이다. 관광객의 편리함보다 지역 주민의 삶을 먼저 배려해야 한다.</p>
+        </div>
+      </div>
+
+      <h3>지역 주민에게 예의를 지키는 방법</h3>
+      <ul>
+        <li>골목, 마을, 상점 앞에서 큰 소리로 떠들지 않는다.</li>
+        <li>주민의 집, 마당, 사유지, 밭, 돌담 안쪽으로 들어가지 않는다.</li>
+        <li>사진을 찍을 때 주민 얼굴, 차량 번호, 집 내부가 나오지 않도록 주의한다.</li>
+        <li>상점, 식당, 체험장 직원에게 “감사합니다”, “안녕하세요”라고 예의 있게 말한다.</li>
+        <li>길을 묻거나 도움을 받을 때 정중한 태도로 말한다.</li>
+        <li>지역 주민을 구경거리처럼 바라보거나 촬영하지 않는다.</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>사유지 출입 금지</b>
+        <p>예쁜 사진을 찍기 위해 밭, 마당, 돌담 안쪽, 개인 주차장, 민가 앞에 들어가는 행동은 지역 주민에게 피해를 줄 수 있다. 출입 가능 여부가 불분명하면 들어가지 않는 것이 원칙이다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 3. 주민 존중 상황 판단하기</h3>
+        <p>다음 상황에서 올바른 행동을 써 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>상황</th>
+              <th>올바른 행동</th>
+            </tr>
+            <tr>
+              <td>마을 골목의 돌담이 예뻐서 안쪽으로 들어가 사진을 찍고 싶다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>식당 직원이 바빠 보이는데 친구가 불친절하다고 큰소리로 말하려 한다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>주민이 지나가는 모습이 사진 배경에 크게 잡혔다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>친구들이 마을길에서 큰 소리로 장난치고 있다.</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 시설 이용 시 장소별 예절 준수</h2>
+      <p>수학여행 중 방문하는 장소마다 지켜야 할 예절이 다르다. 공항, 숙소, 식당, 박물관, 자연 관광지, 체험장 등 각 장소의 성격에 맞는 태도를 갖추어야 한다.</p>
+
+      <div class="principle">
+        <div class="principle-label safe-label">원칙 4<br>장소별 예절</div>
+        <div class="principle-body">
+          <b>각 장소의 규칙, 안내문, 직원의 지시를 존중한다.</b>
+          <p>공공시설과 관광지는 많은 사람이 함께 사용하는 공간이다. 직원의 안내는 불편을 주기 위한 것이 아니라 안전과 질서 유지를 위한 것이다.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>장소</th>
+            <th>지켜야 할 예절</th>
+          </tr>
+          <tr>
+            <td>공항</td>
+            <td>줄 서기, 큰 소리 자제, 보안검색 협조, 탑승 안내 준수, 통로 막지 않기</td>
+          </tr>
+          <tr>
+            <td>버스</td>
+            <td>쓰레기 두고 내리지 않기, 큰 소리 자제, 운전기사님께 예의 지키기, 좌석 정리</td>
+          </tr>
+          <tr>
+            <td>숙소</td>
+            <td>소음 자제, 로비와 복도 질서 유지, 객실 청결, 비품 훼손 금지, 직원 안내 준수</td>
+          </tr>
+          <tr>
+            <td>식당</td>
+            <td>음식 남기지 않기, 식기 정리, 직원에게 예의 있게 말하기, 다른 손님 배려</td>
+          </tr>
+          <tr>
+            <td>박물관·기념관</td>
+            <td>조용히 관람, 전시물 만지지 않기, 사진 촬영 가능 여부 확인, 뛰지 않기</td>
+          </tr>
+          <tr>
+            <td>자연 관광지</td>
+            <td>탐방로 이탈 금지, 쓰레기 되가져가기, 식물·돌·흙 훼손 금지, 위험한 사진 촬영 금지</td>
+          </tr>
+          <tr>
+            <td>체험장·상점</td>
+            <td>순서 지키기, 물건 함부로 만지지 않기, 파손 주의, 감사 인사하기</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="safe-box">
+        <b>좋은 인상을 남기는 말</b>
+        <p>“안녕하세요.”, “감사합니다.”, “실례합니다.”, “죄송합니다.”, “괜찮으시면 여쭤봐도 될까요?”와 같은 말은 지역 사회와 시설 이용자에게 좋은 인상을 남긴다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. 제주 자연과 문화 존중하기</h2>
+
+      <div class="principle">
+        <div class="principle-label nature-label">원칙 5<br>자연·문화 존중</div>
+        <div class="principle-body">
+          <b>제주의 자연환경과 문화유산을 훼손하지 않고 존중한다.</b>
+          <p>제주는 아름다운 자연환경, 독특한 역사와 문화, 지역 주민의 삶이 함께 어우러진 공간이다. 학생들은 단순히 사진을 찍고 지나가는 관광객이 아니라, 지역을 배우고 존중하는 학습자로 행동해야 한다.</p>
+        </div>
+      </div>
+
+      <h3>자연환경 보호 예절</h3>
+      <ul>
+        <li>정해진 탐방로를 벗어나지 않는다.</li>
+        <li>돌, 식물, 조개, 모래 등을 함부로 가져오지 않는다.</li>
+        <li>해안가, 오름, 숲에서 쓰레기를 남기지 않는다.</li>
+        <li>야생동물에게 먹이를 주지 않는다.</li>
+        <li>위험한 장소에서 인증샷을 찍지 않는다.</li>
+      </ul>
+
+      <h3>문화·역사 공간 예절</h3>
+      <ul>
+        <li>기념관, 추모 공간, 역사 유적에서는 장난치지 않고 차분하게 관람한다.</li>
+        <li>전시물, 안내판, 조형물을 훼손하거나 만지지 않는다.</li>
+        <li>사진 촬영 금지 구역에서는 촬영하지 않는다.</li>
+        <li>지역의 역사와 아픔을 가볍게 농담으로 다루지 않는다.</li>
+        <li>설명과 안내를 들을 때 휴대폰 사용을 줄이고 집중한다.</li>
+      </ul>
+
+      <div class="nature-box">
+        <b>제주를 배우는 태도</b>
+        <p>제주는 단순한 여행지가 아니라 화산섬의 자연, 해양 문화, 공동체의 삶, 역사적 기억이 담긴 지역이다. 좋은 수학여행은 많이 소비하는 여행이 아니라 깊이 보고 존중하며 배우는 여행이다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. 공공 예절 상황별 올바른 대처</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>상황</th>
+            <th>잘못된 행동</th>
+            <th>올바른 행동</th>
+            <th>이유</th>
+          </tr>
+          <tr>
+            <td>공항에서 친구를 멀리서 발견했다.</td>
+            <td>큰 소리로 이름을 부른다.</td>
+            <td>가까이 가서 말하거나 메시지로 연락한다.</td>
+            <td>공공장소에서는 소음을 줄여야 한다.</td>
+          </tr>
+          <tr>
+            <td>관광지에 쓰레기통이 보이지 않는다.</td>
+            <td>작은 쓰레기라 길가에 버린다.</td>
+            <td>가방에 넣어 두었다가 쓰레기통에 버린다.</td>
+            <td>작은 쓰레기도 환경과 지역 사회에 피해를 준다.</td>
+          </tr>
+          <tr>
+            <td>식당에서 음식이 늦게 나온다.</td>
+            <td>직원에게 짜증 섞인 말투로 항의한다.</td>
+            <td>차분하고 예의 있게 상황을 묻는다.</td>
+            <td>직원도 존중받아야 할 지역 사회 구성원이다.</td>
+          </tr>
+          <tr>
+            <td>마을길에서 예쁜 집을 발견했다.</td>
+            <td>마당 가까이 들어가 사진을 찍는다.</td>
+            <td>사유지에 들어가지 않고 공공장소에서만 촬영한다.</td>
+            <td>주민의 사생활과 재산권을 존중해야 한다.</td>
+          </tr>
+          <tr>
+            <td>박물관 전시물이 신기하다.</td>
+            <td>손으로 만지고 친구에게 장난친다.</td>
+            <td>안내문을 확인하고 조용히 관람한다.</td>
+            <td>전시물은 모두가 함께 보존해야 하는 자료이다.</td>
+          </tr>
+          <tr>
+            <td>해안가에서 단체 사진을 찍는다.</td>
+            <td>위험한 바위 위에 올라가거나 쓰레기를 두고 간다.</td>
+            <td>안전한 장소에서 촬영하고 주변을 정리한다.</td>
+            <td>안전과 환경 보호가 먼저이다.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. 좋은 수학여행객이 되는 방법</h2>
+      <p>좋은 수학여행객은 조용히만 있는 사람이 아니다. 즐겁게 배우고, 적극적으로 참여하되, 다른 사람에게 피해를 주지 않는 사람이다.</p>
+
+      <div class="principle">
+        <div class="principle-label civic-label">원칙 6<br>좋은 여행객</div>
+        <div class="principle-body">
+          <b>즐겁게 참여하되, 지역 사회와 공공장소를 존중한다.</b>
+          <p>웃고, 사진 찍고, 친구들과 추억을 만드는 것은 좋다. 다만 그 과정에서 소음, 쓰레기, 무례한 말, 무질서, 사유지 침범, 시설 훼손이 없어야 한다.</p>
+        </div>
+      </div>
+
+      <h3>좋은 수학여행객의 행동</h3>
+      <ul>
+        <li>시설 직원, 기사님, 해설사, 지역 주민에게 예의 있게 인사한다.</li>
+        <li>줄을 서고 순서를 지킨다.</li>
+        <li>단체 이동 시 통로를 막지 않는다.</li>
+        <li>공공장소에서는 목소리를 낮춘다.</li>
+        <li>자신이 만든 쓰레기는 자신이 처리한다.</li>
+        <li>친구가 예절을 어기려 할 때 부드럽게 알려 준다.</li>
+        <li>제주의 자연과 문화를 배우려는 태도로 참여한다.</li>
+      </ul>
+
+      <div class="activity">
+        <h3>활동 4. 좋은 수학여행객 선언문 만들기</h3>
+        <p>“나는 제주에서 이런 학생으로 기억되고 싶다”라는 문장으로 시작하여, 나의 실천 선언문을 작성해 봅시다.</p>
+        <div class="long-blank"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. 형성평가</h2>
+      <div class="quiz">
+        <div class="quiz-item">
+          <p>공공장소에서는 학교의 명예를 생각하며 소음과 소란을 자제해야 한다. ( O / X )</p>
+          <p class="answer">정답: O — 학생들의 행동은 학교 전체의 이미지와 연결된다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>작은 쓰레기는 눈에 잘 띄지 않으므로 관광지에 버려도 괜찮다. ( O / X )</p>
+          <p class="answer">정답: X — 작은 쓰레기도 환경과 지역 사회에 피해를 준다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>제주 마을의 예쁜 돌담이나 마당은 사진을 위해 잠깐 들어가도 된다. ( O / X )</p>
+          <p class="answer">정답: X — 사유지일 수 있으므로 허락 없이 들어가면 안 된다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>시설 직원과 지역 주민에게 예의 있게 말하는 것도 공공 예절에 해당한다. ( O / X )</p>
+          <p class="answer">정답: O — 지역 사회를 존중하는 태도이다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>박물관이나 기념관에서는 전시물과 공간의 의미를 존중하며 차분하게 관람해야 한다. ( O / X )</p>
+          <p class="answer">정답: O — 문화·역사 공간에서는 관람 예절이 중요하다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>좋은 수학여행객은 즐겁게 참여하면서도 다른 사람에게 피해를 주지 않는 사람이다. ( O / X )</p>
+          <p class="answer">정답: O — 즐거움과 공공성은 함께 지켜야 한다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. 나의 지역 사회 및 공공 예절 체크리스트</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>점검 항목</th>
+            <th>확인</th>
+          </tr>
+          <tr>
+            <td>공공장소에서 소음과 소란을 자제하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>학교의 명예를 생각하며 말과 행동을 조심하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>쓰레기를 무단 투기하지 않고 정해진 장소에 버리겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>쓰레기통이 없으면 쓰레기를 가지고 있다가 나중에 처리하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>지역 주민의 생활 공간과 사생활을 존중하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>식당, 숙소, 관광지, 공항 등 각 장소의 예절과 안내를 지키겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>제주의 자연환경을 훼손하지 않고 탐방로와 안전 수칙을 지키겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>박물관, 기념관, 역사 공간에서는 차분하고 존중하는 태도로 관람하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>시설 직원, 기사님, 해설사, 지역 주민에게 예의 있게 인사하고 말하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>11. 마무리 민주시민 다짐문</h2>
+      <div class="pledge">
+        <p>나는 제주특별자치도로 수학여행을 가는 학생으로서, 학교 밖에서도 민주시민의 책임을 다하겠다. 공공장소에서 소음과 소란을 자제하고, 학교의 명예를 생각하며 말과 행동을 조심하겠다. 쓰레기를 무단으로 버리지 않고, 내가 만든 쓰레기는 내가 책임지고 처리하겠다. 지역 주민과 시설 직원, 기사님, 해설사 등 만나는 모든 사람에게 예의 있게 대하며, 각 장소의 규칙과 안내를 따르겠다. 또한 제주의 자연환경과 문화·역사 공간을 존중하고, 즐겁게 여행하되 다른 사람에게 피해를 주지 않는 성숙한 학생으로 행동하겠다.</p>
+        <div class="signature">
+          <div>날짜: <span></span></div>
+          <div>이름: <span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>12. 추가로 생각해 볼 질문</h2>
+      <ol>
+        <li>수학여행에서 학생 한 명의 행동이 학교의 명예와 연결되는 이유는 무엇일까?</li>
+        <li>관광지는 왜 누군가에게는 삶의 터전이라고 말할 수 있을까?</li>
+        <li>제주의 자연환경을 보호하기 위해 학생들이 실천할 수 있는 가장 작은 행동은 무엇일까?</li>
+        <li>공공장소에서 자유와 질서가 함께 필요하다는 말은 무슨 뜻일까?</li>
+        <li>이번 수학여행을 통해 내가 어떤 민주시민으로 성장할 수 있을까?</li>
+      </ol>
+      <p class="small">2026학년도 전주한일고등학교 1학년 수학여행</p>
+    </section>
+  </div>
+</body>
+</html>

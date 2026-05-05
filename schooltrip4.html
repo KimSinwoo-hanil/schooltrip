@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수학여행 사전 안전교육 4차시 - 건강 및 위생 관리</title>
+  <style>
+    :root {
+      --main: #2d6a4f;
+      --sub: #effaf4;
+      --accent: #f4a261;
+      --danger: #c1121f;
+      --safe: #2a9d8f;
+      --meal: #f9c74f;
+      --medicine: #457b9d;
+      --clean: #4cc9f0;
+      --gray: #f6f7f9;
+      --text: #222;
+      --line: #d9e2ec;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #effaf4 0%, #ffffff 42%);
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 24px 60px;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #2d6a4f, #52b788);
+      color: white;
+      border-radius: 24px;
+      padding: 38px 36px;
+      box-shadow: 0 14px 35px rgba(45, 106, 79, 0.24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "🍽️ 🧼 💊";
+      position: absolute;
+      right: 28px;
+      bottom: 18px;
+      font-size: 52px;
+      opacity: 0.28;
+      letter-spacing: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 12px;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+
+    .info-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    section {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(35, 55, 80, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--main);
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      border-left: 7px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #173b6d;
+      font-size: 19px;
+    }
+
+    p { margin: 8px 0; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 6px 0; }
+
+    .highlight {
+      background: #fff3df;
+      border-left: 5px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin: 14px 0;
+      font-weight: 650;
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 14px;
+      background: var(--sub);
+      border: 1px solid #c8ead9;
+      border-radius: 18px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .principle-label {
+      font-weight: 900;
+      color: white;
+      background: var(--main);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 78px;
+      padding: 8px;
+    }
+
+    .meal-label { background: #9a6b00; }
+    .clean-label { background: #168aad; }
+    .medicine-label { background: var(--medicine); }
+    .danger-label { background: var(--danger); }
+    .safe-label { background: var(--safe); }
+
+    .principle-body b { color: #0f5132; }
+
+    .danger-box {
+      border: 1px solid #f2b4b4;
+      background: #fff1f1;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .danger-box b { color: var(--danger); }
+
+    .safe-box {
+      border: 1px solid #b9e6df;
+      background: #effbf9;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .safe-box b { color: #13766d; }
+
+    .meal-box {
+      border: 2px solid #f9c74f;
+      background: #fff9df;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .medicine-box {
+      border: 2px solid #a8dadc;
+      background: #f1fbfc;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .activity {
+      background: var(--gray);
+      border: 1px dashed #aab7c4;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 16px 0;
+    }
+
+    .long-blank {
+      display: block;
+      min-height: 72px;
+      border: 1px solid #c7d0da;
+      background: white;
+      border-radius: 12px;
+      margin-top: 8px;
+      padding: 10px;
+    }
+
+    .short-blank {
+      display: inline-block;
+      min-width: 130px;
+      border-bottom: 2px solid #555;
+      height: 1.2em;
+      vertical-align: baseline;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      font-size: 15px;
+    }
+
+    th {
+      background: #2d6a4f;
+      color: white;
+      padding: 11px;
+      border: 1px solid #2d6a4f;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid #d5dde6;
+      padding: 11px;
+      vertical-align: top;
+    }
+
+    .center { text-align: center; }
+
+    .small {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .scenario {
+      border: 1px solid #d9e2ec;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 14px 0;
+      background: #ffffff;
+    }
+
+    .scenario-title {
+      font-weight: 900;
+      color: var(--main);
+      margin-bottom: 6px;
+    }
+
+    .quiz { counter-reset: q; }
+
+    .quiz-item {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid #d9e2ec;
+      background: #ffffff;
+    }
+
+    .quiz-item::before {
+      counter-increment: q;
+      content: "문제 " counter(q);
+      display: inline-block;
+      background: var(--accent);
+      color: #222;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .answer {
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .pledge {
+      background: linear-gradient(135deg, #effaf4, #ffffff);
+      border: 2px solid #52b788;
+      border-radius: 20px;
+      padding: 22px;
+      font-weight: 600;
+    }
+
+    .signature {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .signature span {
+      min-width: 170px;
+      border-bottom: 1px solid #333;
+      display: inline-block;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { max-width: none; padding: 0; }
+      section, .cover { box-shadow: none; break-inside: avoid; }
+      .cover, th, .principle-label {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .info-grid { grid-template-columns: repeat(2, 1fr); }
+      .principle { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cover">
+      <div class="badge">수학여행 사전 안전교육 4차시</div>
+      <h1>Ⅳ. 건강 및 위생 관리</h1>
+      <p class="subtitle">사고 못지않게 중요한 질병 예방과 컨디션 관리</p>
+
+      <div class="info-grid">
+      </div>
+    </header>
+
+    <section>
+      <h2>1. 건강 관리가 중요한 이유</h2>
+      <p>수학여행은 평소보다 이동 시간이 길고, 식사 환경과 수면 시간이 달라지며, 많은 친구들과 함께 생활하는 활동이다. 그래서 작은 부주의가 복통, 멀미, 감기, 식중독, 부상 등으로 이어질 수 있다.</p>
+
+      <div class="highlight">
+        건강 관리는 “나만 아프지 않기 위한 일”이 아니라, 함께 여행하는 친구들의 즐거움과 전체 일정을 지키는 공동체 책임이다.
+      </div>
+
+      <h3>여행 중 건강 문제가 생기면 발생할 수 있는 일</h3>
+      <ul>
+        <li>본인이 여행을 충분히 즐기지 못하고 병원 진료나 휴식이 필요할 수 있다.</li>
+        <li>담임교사와 인솔교사가 학생을 돌보기 위해 전체 일정 조정이 필요할 수 있다.</li>
+        <li>전염성 질환이나 식중독이 의심되면 다른 학생들의 건강에도 영향을 줄 수 있다.</li>
+        <li>부상으로 인해 친구들이 기다리거나, 예정된 활동이 축소될 수 있다.</li>
+        <li>몸이 좋지 않은 상태에서 억지로 참여하면 증상이 더 심해질 수 있다.</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>중요</b>
+        <p>수학여행에서는 “참으면 괜찮아지겠지”라는 생각이 위험할 수 있다. 몸 상태 이상은 초기에 알릴수록 빠르게 대처할 수 있다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 과식 금지 및 균형 잡힌 식사</h2>
+
+      <div class="principle">
+        <div class="principle-label meal-label">원칙 1<br>적당히 먹기</div>
+        <div class="principle-body">
+          <b>뷔페형 식당에서는 자신이 먹을 수 있는 만큼만 음식을 담고, 과식하지 않는다.</b>
+          <p>여행 중에는 맛있는 음식이 많고 친구들과 함께 먹는 분위기 때문에 평소보다 많이 먹기 쉽다. 그러나 과식은 복통, 소화불량, 구토, 멀미 악화로 이어질 수 있다.</p>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h3>뷔페형 식당에서 지켜야 할 식사 원칙</h3>
+        <ul>
+          <li>처음부터 많이 담지 않고, 먹을 수 있는 만큼만 담는다.</li>
+          <li>고기, 튀김, 면류만 먹지 않고 밥, 채소, 국, 단백질 음식을 균형 있게 먹는다.</li>
+          <li>처음 보는 음식은 조금만 담아 맛을 본다.</li>
+          <li>너무 빨리 먹지 않고 천천히 씹어 먹는다.</li>
+          <li>차가운 음료나 탄산음료를 과하게 마시지 않는다.</li>
+          <li>남은 음식을 줄이기 위해 한 번에 욕심내지 않는다.</li>
+        </ul>
+      </div>
+
+      <div class="danger-box">
+        <b>과식이 위험한 이유</b>
+        <p>과식 후 바로 버스를 타면 멀미가 심해질 수 있고, 복통이나 구토가 생기면 본인뿐 아니라 같은 버스의 친구들과 전체 일정에도 영향을 줄 수 있다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 1. 뷔페 식사 계획 세우기</h3>
+        <p>내가 뷔페형 식당에서 건강하게 먹기 위해 지킬 식사 원칙을 3가지 써 봅시다.</p>
+        <p>① <span class="short-blank"></span></p>
+        <p>② <span class="short-blank"></span></p>
+        <p>③ <span class="short-blank"></span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 식사 전 손 씻기와 식중독 예방</h2>
+
+      <div class="principle">
+        <div class="principle-label clean-label">원칙 2<br>손 씻기</div>
+        <div class="principle-body">
+          <b>식사 전, 화장실 이용 후, 외부 활동 후에는 반드시 손을 씻는다.</b>
+          <p>여행 중에는 버스 손잡이, 문손잡이, 난간, 체험 도구, 공용 물품 등을 만지는 일이 많다. 손을 씻지 않고 음식을 먹으면 세균이나 바이러스가 몸에 들어갈 수 있다.</p>
+        </div>
+      </div>
+
+      <h3>손을 씻어야 하는 순간</h3>
+      <ul>
+        <li>식사 전과 간식 먹기 전</li>
+        <li>화장실을 이용한 후</li>
+        <li>버스, 항공기, 공항, 관광지 등 사람이 많은 곳을 이동한 후</li>
+        <li>동물, 흙, 물, 체험 도구 등을 만진 후</li>
+        <li>기침이나 재채기를 한 후</li>
+      </ul>
+
+      <h3>식중독 예방 수칙</h3>
+      <ul>
+        <li>상한 냄새가 나거나 상태가 이상한 음식은 먹지 않는다.</li>
+        <li>길거리 음식이나 외부 음식은 교사 안내에 따라 섭취한다.</li>
+        <li>개봉 후 오래 지난 음식이나 음료는 먹지 않는다.</li>
+        <li>친구와 물병, 빨대, 숟가락, 젓가락을 함께 쓰지 않는다.</li>
+        <li>배가 아프거나 설사, 구토 증상이 있으면 즉시 담임교사에게 알린다.</li>
+      </ul>
+
+      <div class="safe-box">
+        <b>기억하기</b>
+        <p>손 씻기는 가장 간단하지만 가장 효과적인 질병 예방 습관이다. 비누와 물이 없을 때에는 손 소독제를 사용할 수 있지만, 가능하면 흐르는 물과 비누로 씻는 것이 좋다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 2. 식중독 위험 상황 찾기</h3>
+        <p>다음 상황에서 식중독이나 위생 문제를 일으킬 수 있는 행동을 3가지 이상 찾아봅시다.</p>
+        <div class="scenario">
+          <div class="scenario-title">상황</div>
+          <p>관광지에서 활동을 마친 뒤 손을 씻지 않고 간식을 먹었다. 친구가 마시던 음료를 한 모금 마셨고, 가방 안에 오래 넣어 둔 김밥을 저녁에 다시 먹으려고 했다.</p>
+          <p><b>위험한 행동:</b></p>
+          <div class="long-blank"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 개인 상비약과 알레르기·지병 관리</h2>
+
+      <div class="principle">
+        <div class="principle-label medicine-label">원칙 3<br>개인 약 준비</div>
+        <div class="principle-body">
+          <b>알레르기, 지병, 평소 복용약이 있는 학생은 개인 상비약을 반드시 준비한다.</b>
+          <p>두통, 복통, 알레르기, 천식, 비염, 피부 질환, 소화기 질환 등 평소 관리가 필요한 건강 상태가 있다면 여행 전에 보호자와 상의하여 필요한 약을 준비해야 한다.</p>
+        </div>
+      </div>
+
+      <div class="medicine-box">
+        <h3>개인 상비약 준비 시 확인할 점</h3>
+        <ul>
+          <li>평소 복용하는 약은 여행 기간보다 여유 있게 챙긴다.</li>
+          <li>약 이름, 복용 방법, 복용 시간을 스스로 알고 있어야 한다.</li>
+          <li>알레르기 유발 음식이나 환경을 미리 확인한다.</li>
+          <li>약은 친구와 나누어 먹지 않는다.</li>
+          <li>특별히 조심해야 할 건강 상태는 담임교사에게 사전에 알린다.</li>
+          <li>약은 필요할 때 찾기 쉬운 곳에 보관하되, 분실하지 않도록 관리한다.</li>
+        </ul>
+      </div>
+
+      <div class="danger-box">
+        <b>약을 친구와 나누어 먹으면 안 되는 이유</b>
+        <p>같은 증상처럼 보여도 원인이 다를 수 있고, 약 성분이 개인의 몸 상태와 맞지 않을 수 있다. 친구의 약을 빌려 먹거나 자신의 약을 친구에게 주는 행동은 절대 하지 않는다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 3. 나의 건강 준비 카드</h3>
+        <p>여행 전 스스로 확인해야 할 건강 정보를 적어 봅시다. 민감한 개인정보는 공개하지 않아도 되며, 필요한 경우 담임교사에게 개별적으로 알립니다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>확인 항목</th>
+              <th>나의 점검</th>
+            </tr>
+            <tr>
+              <td>평소 자주 나타나는 증상</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>준비해야 할 개인 상비약</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>주의해야 할 음식 또는 알레르기</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>담임교사에게 미리 알려야 할 내용</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 멀미 예방과 사전 보고</h2>
+
+      <div class="principle">
+        <div class="principle-label medicine-label">원칙 4<br>멀미 대비</div>
+        <div class="principle-body">
+          <b>평소 멀미를 자주 하는 학생은 미리 담임교사에게 알리고 멀미약을 꼭 준비한다.</b>
+          <p>이번 여행은 버스 이동 시간이 많으므로 멀미가 있는 학생은 사전 준비가 중요하다. 멀미는 참는다고 해결되지 않는 경우가 많고, 증상이 심해지면 구토와 탈수, 두통으로 이어질 수 있다.</p>
+        </div>
+      </div>
+
+      <h3>멀미 예방 수칙</h3>
+      <ul>
+        <li>출발 전 과식하지 않는다.</li>
+        <li>버스 안에서 책이나 휴대폰 화면을 오래 보지 않는다.</li>
+        <li>가능하면 먼 곳이나 창밖의 고정된 방향을 바라본다.</li>
+        <li>멀미약은 보호자와 상의하여 준비하고, 복용 방법을 미리 확인한다.</li>
+        <li>증상이 시작되면 즉시 담임교사나 인솔교사에게 알린다.</li>
+        <li>비닐봉지, 물티슈, 물 등 필요한 개인 물품을 준비한다.</li>
+      </ul>
+
+      <div class="safe-box">
+        <b>담임교사에게 미리 알려야 하는 이유</b>
+        <p>멀미가 심한 학생을 교사가 미리 알고 있으면 좌석 배치, 휴식, 비상 물품 준비, 이동 중 확인 등 필요한 도움을 줄 수 있다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 4. 멀미 대비 계획 세우기</h3>
+        <p>멀미를 예방하기 위해 내가 실천할 행동을 써 봅시다.</p>
+        <p>출발 전: <span class="short-blank"></span></p>
+        <p>버스 안: <span class="short-blank"></span></p>
+        <p>증상이 있을 때: <span class="short-blank"></span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. 몸 상태 이상 시 즉시 담임교사에게 보고</h2>
+
+      <div class="principle">
+        <div class="principle-label danger-label">원칙 5<br>즉시 보고</div>
+        <div class="principle-body">
+          <b>몸 상태가 이상하면 참고 버티지 말고 즉시 담임교사에게 알린다.</b>
+          <p>초기에 알리면 간단한 휴식이나 조치로 회복될 수 있지만, 늦게 알리면 병원 진료가 필요하거나 전체 일정에 큰 영향을 줄 수 있다.</p>
+        </div>
+      </div>
+
+      <h3>즉시 보고해야 하는 증상</h3>
+      <ul>
+        <li>심한 복통, 설사, 구토, 메스꺼움</li>
+        <li>발열, 오한, 심한 기침, 목 통증</li>
+        <li>어지럼증, 두통, 숨쉬기 어려움</li>
+        <li>알레르기 반응: 두드러기, 가려움, 입술·눈 주변 부기</li>
+        <li>넘어짐, 삠, 타박상, 출혈, 화상</li>
+        <li>심한 피로감이나 걷기 어려운 상태</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>보고를 늦추면 안 되는 이유</b>
+        <p>전염성 질환이나 식중독 증상은 빠른 확인이 중요하다. 또한 부상은 처음에는 괜찮아 보여도 시간이 지나며 통증이 심해질 수 있다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 5. 보고 문장 만들기</h3>
+        <p>몸이 좋지 않을 때 담임교사에게 보내거나 말할 문장을 작성해 봅시다. 증상, 시작 시간, 현재 위치가 들어가면 좋습니다.</p>
+        <p><b>예시:</b> “선생님, 20분 전부터 배가 아프고 메스꺼움이 있습니다. 지금 버스 안 제 자리에 앉아 있습니다.”</p>
+        <p><b>내가 작성한 문장:</b></p>
+        <div class="long-blank"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. 일정 후 숙소에 도착하면 깨끗이 씻기</h2>
+
+      <div class="principle">
+        <div class="principle-label clean-label">원칙 6<br>개인 청결</div>
+        <div class="principle-body">
+          <b>일정을 마치고 숙소에 도착하면 반드시 깨끗이 씻고, 땀과 먼지를 제거한다.</b>
+          <p>하루 동안 버스, 관광지, 식당, 공항, 체험 장소 등을 다니면 땀과 먼지, 세균이 몸과 옷에 묻을 수 있다. 씻지 않고 잠들면 피부 트러블, 냄새, 감기, 친구와의 불편한 관계로 이어질 수 있다.</p>
+        </div>
+      </div>
+
+      <h3>숙소 도착 후 개인 청결 수칙</h3>
+      <ul>
+        <li>손과 얼굴을 먼저 씻고, 가능하면 샤워를 한다.</li>
+        <li>양치질을 하고, 세면도구를 사용 후 바로 정리한다.</li>
+        <li>젖은 수건과 옷은 정해진 곳에 둔다.</li>
+        <li>땀에 젖은 옷은 갈아입고, 다음 날 입을 옷을 미리 준비한다.</li>
+        <li>화장실 사용 후 머리카락, 물기, 세면도구를 정리한다.</li>
+        <li>같은 방 친구가 씻을 수 있도록 시간을 배려한다.</li>
+      </ul>
+
+      <div class="activity">
+        <h3>활동 6. 객실 위생 약속 정하기</h3>
+        <p>같은 방 친구들과 함께 지킬 위생 약속을 4가지 정해 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>우리 방 위생 약속</th>
+            </tr>
+            <tr><td class="center">1</td><td></td></tr>
+            <tr><td class="center">2</td><td></td></tr>
+            <tr><td class="center">3</td><td></td></tr>
+            <tr><td class="center">4</td><td></td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. 부상 예방: 늘 조심조심 행동하기</h2>
+
+      <div class="principle">
+        <div class="principle-label safe-label">원칙 7<br>부상 예방</div>
+        <div class="principle-body">
+          <b>여행 중 다치면 본인뿐 아니라 여행을 즐기고 있는 전체 학생들에게 피해를 줄 수 있음을 기억한다.</b>
+          <p>장난, 뛰기, 무리한 사진 촬영, 위험한 장소 접근, 계단에서 휴대폰 보기, 숙소에서 소란스럽게 움직이기 등은 모두 부상으로 이어질 수 있다. 수학여행에서는 평소보다 더 조심스럽게 행동해야 한다.</p>
+        </div>
+      </div>
+
+      <h3>부상을 예방하는 행동</h3>
+      <ul>
+        <li>계단, 에스컬레이터, 버스 승하차 시 뛰지 않는다.</li>
+        <li>사진을 찍기 위해 난간, 바위, 도로, 물가 등 위험한 곳에 올라가지 않는다.</li>
+        <li>친구를 밀거나 잡아당기지 않는다.</li>
+        <li>숙소 침대 위에서 뛰거나 물건을 던지지 않는다.</li>
+        <li>젖은 바닥, 경사로, 계단에서는 천천히 이동한다.</li>
+        <li>몸이 피곤할수록 장난이 사고로 이어지기 쉬움을 기억한다.</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>부상은 전체 일정에 영향을 준다</b>
+        <p>한 학생이 다치면 응급 처치, 병원 이동, 보호자 연락, 교사 동행 등이 필요할 수 있다. 이 과정에서 다른 학생들도 기다리거나 일정이 변경될 수 있다. 안전한 행동은 친구들을 위한 배려이기도 하다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 7. 위험 행동 바꾸기</h3>
+        <p>다음 행동을 부상을 예방하는 행동으로 바꾸어 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>위험 행동</th>
+              <th>안전한 행동</th>
+            </tr>
+            <tr>
+              <td>사진을 잘 찍으려고 난간에 올라간다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>숙소 복도에서 친구를 잡으러 뛰어간다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>버스에서 내리며 휴대폰 화면을 본다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>친구가 장난으로 등을 밀었다.</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. 건강·위생 상황별 올바른 대처</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>상황</th>
+            <th>잘못된 행동</th>
+            <th>올바른 행동</th>
+            <th>이유</th>
+          </tr>
+          <tr>
+            <td>뷔페 식당에서 먹고 싶은 음식이 많다.</td>
+            <td>처음부터 접시에 가득 담는다.</td>
+            <td>먹을 수 있는 만큼만 조금씩 담는다.</td>
+            <td>과식과 음식물 낭비를 예방할 수 있다.</td>
+          </tr>
+          <tr>
+            <td>관광지 활동 후 간식을 먹으려 한다.</td>
+            <td>손을 씻지 않고 바로 먹는다.</td>
+            <td>손을 씻거나 손 소독 후 먹는다.</td>
+            <td>식중독과 감염을 예방할 수 있다.</td>
+          </tr>
+          <tr>
+            <td>평소 멀미가 심하다.</td>
+            <td>말하지 않고 그냥 버스에 탄다.</td>
+            <td>미리 담임교사에게 알리고 멀미약을 준비한다.</td>
+            <td>좌석 배치와 사전 조치가 가능하다.</td>
+          </tr>
+          <tr>
+            <td>몸이 으슬으슬하고 열이 나는 것 같다.</td>
+            <td>친구들에게만 말하고 참는다.</td>
+            <td>즉시 담임교사에게 알린다.</td>
+            <td>초기 대응과 전염 예방이 중요하다.</td>
+          </tr>
+          <tr>
+            <td>하루 일정을 마치고 숙소에 도착했다.</td>
+            <td>씻지 않고 침대에 눕는다.</td>
+            <td>깨끗이 씻고 옷과 세면도구를 정리한다.</td>
+            <td>개인 위생과 친구 배려에 필요하다.</td>
+          </tr>
+          <tr>
+            <td>멋진 사진을 찍고 싶은 장소가 위험해 보인다.</td>
+            <td>잠깐 올라가서 사진만 찍는다.</td>
+            <td>안전한 장소에서 촬영한다.</td>
+            <td>부상은 본인과 전체 일정에 영향을 준다.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. 형성평가</h2>
+      <div class="quiz">
+        <div class="quiz-item">
+          <p>뷔페형 식당에서는 먹고 싶은 음식을 처음부터 많이 담는 것이 좋다. ( O / X )</p>
+          <p class="answer">정답: X — 먹을 수 있는 만큼만 담아 과식과 음식물 낭비를 줄여야 한다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>식사 전 손 씻기는 식중독 예방에 도움이 된다. ( O / X )</p>
+          <p class="answer">정답: O — 손에 묻은 세균이나 바이러스가 음식과 함께 몸에 들어가는 것을 줄일 수 있다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>친구가 나와 증상이 비슷하면 친구의 약을 빌려 먹어도 된다. ( O / X )</p>
+          <p class="answer">정답: X — 약은 개인의 건강 상태에 따라 다르게 작용하므로 나누어 먹으면 안 된다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>평소 멀미를 자주 하는 학생은 미리 담임교사에게 알리는 것이 좋다. ( O / X )</p>
+          <p class="answer">정답: O — 좌석 배치, 확인, 사전 준비에 도움이 된다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>몸이 아파도 일정에 방해될까 봐 최대한 참고 나중에 말하는 것이 좋다. ( O / X )</p>
+          <p class="answer">정답: X — 증상은 초기에 알릴수록 빠르게 대처할 수 있다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>여행 중 부상은 본인뿐 아니라 전체 학생의 일정에도 영향을 줄 수 있다. ( O / X )</p>
+          <p class="answer">정답: O — 응급 처치, 병원 이동, 일정 조정이 필요할 수 있다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>11. 나의 건강 및 위생 체크리스트</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>점검 항목</th>
+            <th>확인</th>
+          </tr>
+          <tr>
+            <td>뷔페형 식당에서는 내가 먹을 수 있는 만큼만 음식을 담겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>과식하지 않고 균형 잡힌 식사를 하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>식사 전, 화장실 이용 후, 외부 활동 후 손을 씻겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>식중독 예방을 위해 상태가 이상한 음식이나 오래 둔 음식은 먹지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>개인 상비약, 알레르기·지병 관련 준비물을 미리 챙기겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>평소 멀미가 잦다면 담임교사에게 미리 알리고 멀미약을 준비하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>몸 상태 이상이 있으면 즉시 담임교사에게 보고하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>일정을 마치고 숙소에 도착하면 깨끗이 씻겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>나와 친구들의 여행을 위해 부상에 유의하며 조심조심 행동하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>12. 마무리 건강 다짐문</h2>
+      <div class="pledge">
+        <p>나는 수학여행에서 건강과 위생 관리가 사고 예방만큼 중요하다는 것을 이해한다. 뷔페형 식당에서는 먹을 수 있는 만큼만 음식을 담고, 과식하지 않으며 균형 잡힌 식사를 하겠다. 식사 전 손 씻기와 개인 위생을 철저히 하여 식중독을 예방하고, 개인 상비약과 멀미약 등 필요한 준비를 미리 하겠다. 몸 상태가 이상하면 참고 버티지 않고 즉시 담임교사에게 알리며, 일정을 마치고 숙소에 도착하면 깨끗이 씻겠다. 또한 여행 중 부상은 나뿐 아니라 전체 학생에게 영향을 줄 수 있음을 기억하고 늘 조심조심 행동하겠다.</p>
+        <div class="signature">
+          <div>날짜: <span></span></div>
+          <div>이름: <span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>13. 추가로 생각해 볼 질문</h2>
+      <ol>
+        <li>여행 중 “조금 아픈 것”을 빨리 말하는 것이 왜 공동체를 위한 행동일까?</li>
+        <li>뷔페형 식당에서 적당량만 담는 태도는 건강과 환경 측면에서 어떤 의미가 있을까?</li>
+        <li>식중독 예방을 위해 학교와 학생이 각각 해야 할 일은 무엇일까?</li>
+        <li>멀미가 있는 친구를 배려하기 위해 같은 버스 친구들은 어떤 행동을 할 수 있을까?</li>
+        <li>사진 촬영이나 장난이 부상으로 이어지지 않도록 필요한 태도는 무엇일까?</li>
+      </ol>
+      <p class="small">2026학년도 전주한일고등학교 1학년 수학여행</p>
+    </section>
+  </div>
+</body>
+</html>

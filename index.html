@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제주특별자치도 수학여행 안전교육 메인 페이지</title>
+  <style>
+    :root {
+      --sea: #0ea5e9;
+      --deep-sea: #0369a1;
+      --orange: #f97316;
+      --basalt: #1f2937;
+      --green: #16a34a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(249, 115, 22, 0.22) 0 11%, transparent 12%),
+        radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.32) 0 8%, transparent 9%),
+        linear-gradient(180deg, #e0f7ff 0%, #f0fbff 38%, #fff7ed 100%);
+      overflow: hidden;
+      color: var(--basalt);
+    }
+
+    .slide {
+      width: 100vw;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 42px;
+    }
+
+    .ocean {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 28vh;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(255,255,255,0.72) 0 2%, transparent 3%),
+        radial-gradient(circle at 40% 28%, rgba(255,255,255,0.52) 0 2%, transparent 3%),
+        radial-gradient(circle at 76% 18%, rgba(255,255,255,0.6) 0 2%, transparent 3%),
+        linear-gradient(135deg, var(--sea), var(--deep-sea));
+      border-top-left-radius: 50% 28%;
+      border-top-right-radius: 50% 28%;
+    }
+
+    .wave {
+      position: absolute;
+      left: -8%;
+      right: -8%;
+      bottom: 22vh;
+      height: 90px;
+      background: rgba(255,255,255,0.82);
+      border-radius: 50%;
+      opacity: 0.72;
+    }
+
+    .wave.two {
+      bottom: 19vh;
+      left: -12%;
+      right: -12%;
+      height: 76px;
+      opacity: 0.42;
+    }
+
+    .basalt-field {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 110px;
+      background:
+        radial-gradient(circle at 5% 55%, #111827 0 28px, transparent 29px),
+        radial-gradient(circle at 14% 70%, #374151 0 34px, transparent 35px),
+        radial-gradient(circle at 25% 58%, #1f2937 0 42px, transparent 43px),
+        radial-gradient(circle at 38% 74%, #111827 0 32px, transparent 33px),
+        radial-gradient(circle at 51% 55%, #4b5563 0 45px, transparent 46px),
+        radial-gradient(circle at 65% 72%, #1f2937 0 36px, transparent 37px),
+        radial-gradient(circle at 77% 59%, #374151 0 41px, transparent 42px),
+        radial-gradient(circle at 91% 72%, #111827 0 34px, transparent 35px),
+        linear-gradient(180deg, transparent 0 25%, #111827 26% 100%);
+      opacity: 0.95;
+    }
+
+    .card {
+      width: min(980px, 92vw);
+      min-height: 560px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 36px;
+      box-shadow: 0 28px 70px rgba(3, 105, 161, 0.24);
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 2;
+      padding: 58px 60px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 2px dashed rgba(249, 115, 22, 0.36);
+      border-radius: 28px;
+      pointer-events: none;
+    }
+
+    .label {
+      display: inline-block;
+      align-self: flex-start;
+      background: linear-gradient(135deg, var(--orange), #fb923c);
+      color: white;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      border-radius: 999px;
+      padding: 10px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 24px rgba(249, 115, 22, 0.22);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: 1.08;
+      letter-spacing: -0.075em;
+      color: #0f172a;
+      position: relative;
+      z-index: 1;
+    }
+
+    .jeju {
+      color: var(--deep-sea);
+    }
+
+    .safety {
+      color: var(--orange);
+    }
+
+    .subtitle {
+      margin-top: 26px;
+      font-size: clamp(20px, 2.2vw, 30px);
+      font-weight: 800;
+      color: #334155;
+      position: relative;
+      z-index: 1;
+    }
+
+    .desc {
+      margin-top: 18px;
+      max-width: 720px;
+      font-size: clamp(16px, 1.5vw, 20px);
+      color: #475569;
+      position: relative;
+      z-index: 1;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .keyword {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 9px 15px;
+      font-weight: 800;
+      color: #334155;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+    }
+
+    .footer {
+      position: absolute;
+      left: 60px;
+      right: 60px;
+      bottom: 38px;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 15px;
+      color: #64748b;
+      font-weight: 700;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .slide {
+        width: 297mm;
+        min-height: 210mm;
+        padding: 18mm;
+        overflow: hidden;
+      }
+
+      .card, .ocean, .wave, .basalt-field, .tangerine, .stone {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .card {
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .slide {
+        padding: 24px;
+      }
+
+      .card {
+        min-height: 620px;
+        padding: 44px 32px;
+      }
+
+      .tangerine.one {
+        width: 82px;
+        height: 82px;
+        right: 32px;
+        top: 34px;
+      }
+
+      .tangerine.two, .stone {
+        display: none;
+      }
+
+      .footer {
+        left: 32px;
+        right: 32px;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="slide">
+    <div class="wave"></div>
+    <div class="wave two"></div>
+    <div class="ocean"></div>
+    <div class="basalt-field"></div>
+
+    <section class="card" aria-label="제주특별자치도 수학여행 안전교육 메인 페이지">
+      <div class="tangerine one"></div>
+      <div class="tangerine two"></div>
+      <div class="stone"></div>
+
+      <div class="label">2026 수학여행 사전 안전교육</div>
+
+      <h1>
+        <span class="jeju">제주특별자치도</span><br />
+        수학여행 <span class="safety">안전교육</span>
+      </h1>
+
+      <p class="desc">
+        안전한 이동, 질서 있는 생활, 서로를 존중하는 태도, 지역 사회를 배려하는 시민의식으로
+        모두가 즐겁고 의미 있는 수학여행을 만들어 갑니다.
+      </p>
+
+      <div class="footer">
+        <span>2026학년도 전주한일고등학교 1학년 수학여행 안전교육</span>
+        <span>Jeju Safety & Citizenship</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

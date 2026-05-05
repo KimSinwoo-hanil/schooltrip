@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>수학여행 사전 안전교육 1차시 - 이동 및 교통 안전</title>
+<style>
+    :root {
+      --main: #1f4f8f;
+      --sub: #eaf3ff;
+      --accent: #ffb703;
+      --danger: #d62828;
+      --safe: #2a9d8f;
+      --gray: #f6f7f9;
+      --text: #222;
+      --line: #d9e2ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 40%);
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 24px 60px;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #1f4f8f, #3a86ff);
+      color: white;
+      border-radius: 24px;
+      padding: 38px 36px;
+      box-shadow: 0 14px 35px rgba(31, 79, 143, 0.24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "🚌 ✈️ 🚦";
+      position: absolute;
+      right: 28px;
+      bottom: 18px;
+      font-size: 52px;
+      opacity: 0.28;
+      letter-spacing: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 12px;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+
+    .info-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    section {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(35, 55, 80, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--main);
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      border-left: 7px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #173b6d;
+      font-size: 19px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    .goal-list, .check-list, .case-list {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    .goal-list li, .check-list li, .case-list li {
+      margin: 6px 0;
+    }
+
+    .highlight {
+      background: #fff7d6;
+      border-left: 5px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin: 14px 0;
+      font-weight: 600;
+    }
+
+    .safety-rule {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 14px;
+      background: var(--sub);
+      border: 1px solid #c8dcf7;
+      border-radius: 18px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .rule-label {
+      font-weight: 800;
+      color: white;
+      background: var(--main);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 76px;
+      padding: 8px;
+    }
+
+    .rule-body b {
+      color: #0f3460;
+    }
+
+    .danger-box {
+      border: 1px solid #f2b4b4;
+      background: #fff1f1;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .danger-box b {
+      color: var(--danger);
+    }
+
+    .safe-box {
+      border: 1px solid #b9e6df;
+      background: #effbf9;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .safe-box b {
+      color: #13766d;
+    }
+
+    .activity {
+      background: var(--gray);
+      border: 1px dashed #aab7c4;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 16px 0;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 120px;
+      border-bottom: 2px solid #555;
+      height: 1.2em;
+      vertical-align: baseline;
+    }
+
+    .long-blank {
+      display: block;
+      min-height: 70px;
+      border: 1px solid #c7d0da;
+      background: white;
+      border-radius: 12px;
+      margin-top: 8px;
+      padding: 10px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      font-size: 15px;
+    }
+
+    th {
+      background: #1f4f8f;
+      color: white;
+      padding: 11px;
+      border: 1px solid #1f4f8f;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid #d5dde6;
+      padding: 11px;
+      vertical-align: top;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .small {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 12px;
+      margin: 10px 0;
+      align-items: start;
+    }
+
+    .time {
+      background: #173b6d;
+      color: white;
+      font-weight: 800;
+      border-radius: 999px;
+      text-align: center;
+      padding: 6px 10px;
+    }
+
+    .time-content {
+      background: #f7fbff;
+      border: 1px solid #dbeafe;
+      border-radius: 14px;
+      padding: 10px 14px;
+    }
+
+    .quiz {
+      counter-reset: q;
+    }
+
+    .quiz-item {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid #d9e2ec;
+      background: #ffffff;
+    }
+
+    .quiz-item::before {
+      counter-increment: q;
+      content: "문제 " counter(q);
+      display: inline-block;
+      background: var(--accent);
+      color: #222;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .answer {
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .pledge {
+      background: linear-gradient(135deg, #fff7d6, #ffffff);
+      border: 2px solid #ffd166;
+      border-radius: 20px;
+      padding: 22px;
+      font-weight: 600;
+    }
+
+    .signature {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .signature span {
+      min-width: 170px;
+      border-bottom: 1px solid #333;
+      display: inline-block;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      section, .cover {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .cover {
+        color: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      th, .rule-label, .time {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .safety-rule {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+<header class="cover">
+<div class="badge">수학여행 사전 안전교육 1차시</div>
+<h1>Ⅰ. 이동 및 교통 안전</h1>
+<p class="subtitle">버스·항공기·도보 이동 중 사고를 예방하고, 안전한 단체 이동 습관을 익히기</p>
+<div class="info-grid">
+</div>
+</header>
+
+
+<section>
+<h2>1. 버스 이동 안전</h2>
+<div class="safety-rule">
+<div class="rule-label">규칙 1<br/>안전벨트 착용</div>
+<div class="rule-body">
+<b>버스에 탑승하면 출발 전 반드시 안전벨트를 착용한다.</b>
+<p>안전벨트는 급정거, 충돌, 회전, 도로 요철 등 갑작스러운 상황에서 몸이 앞으로 튀어나가거나 좌석 밖으로 밀려나는 것을 막아 준다. “잠깐 이동하는 구간”이라도 사고는 예고 없이 발생할 수 있으므로, 버스가 움직이는 동안에는 항상 착용해야 한다.</p>
+<p><b>실천 방법:</b> 탑승 → 좌석 확인 → 짐 정리 → 안전벨트 착용 → 친구 착용 여부 함께 확인</p>
+</div>
+</div>
+<div class="danger-box">
+<b>위험 사례</b>
+<p>버스가 갑자기 멈추는 순간, 안전벨트를 하지 않은 학생이 앞좌석에 부딪히거나 통로 쪽으로 넘어질 수 있다. 이때 본인뿐 아니라 옆 친구까지 다칠 수 있다.</p>
+</div>
+<div class="safety-rule">
+<div class="rule-label">규칙 2<br/>자리 이동 금지</div>
+<div class="rule-body">
+<b>버스 운행 중에는 자리를 옮기지 않는다.</b>
+<p>운행 중 통로를 걷거나 친구 자리로 이동하면 급정거 시 중심을 잃고 넘어질 위험이 크다. 또한 운전자의 집중을 방해할 수 있다.</p>
+<p><b>실천 방법:</b> 필요한 말은 작은 목소리로 전달하고, 꼭 이동해야 할 일이 있으면 버스가 정차한 뒤 선생님께 알린다.</p>
+</div>
+</div>
+<div class="safety-rule">
+<div class="rule-label">규칙 3<br/>장난 금지</div>
+<div class="rule-body">
+<b>버스 안에서 밀기, 던지기, 소리 지르기, 의자 젖히기 장난을 하지 않는다.</b>
+<p>버스는 교실처럼 안정된 공간이 아니라 계속 움직이는 공간이다. 작은 장난도 급정거와 결합하면 큰 부상으로 이어질 수 있다.</p>
+<p><b>주의 행동:</b> 물건 던지기, 머리 기대고 자는 친구 깨우기, 통로에 발 내밀기, 좌석 위에 올라가기, 큰 소리로 떠들기</p>
+</div>
+</div>
+<div class="activity">
+<h3>활동 1. 버스 안 위험 행동 바꾸기</h3>
+<p>다음 행동을 안전한 행동으로 바꾸어 써 봅시다.</p>
+<div class="table-wrap">
+<table>
+<tr>
+<th>위험 행동</th>
+<th>안전한 행동으로 바꾸기</th>
+</tr>
+<tr>
+<td>친구에게 말을 걸려고 운행 중 통로를 걸어간다.</td>
+<td></td>
+</tr>
+<tr>
+<td>안전벨트가 답답해서 잠깐 풀고 잔다.</td>
+<td></td>
+</tr>
+<tr>
+<td>심심해서 과자 봉지를 친구에게 던진다.</td>
+<td></td>
+</tr>
+<tr>
+<td>버스 안에서 큰 소리로 노래를 부르며 떠든다.</td>
+<td></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section>
+<h2>2. 항공기 이동 안전</h2>
+<p>항공기는 많은 사람이 함께 이용하는 대중교통이자, 정해진 절차와 규칙을 지켜야 하는 이동 수단이다. 수학여행에서는 공항 집합, 보안 검색, 탑승, 기내 이동, 착륙 후 이동까지 모두 단체 질서가 필요하다.</p>
+<h3>① 공항에서 지켜야 할 사항</h3>
+<ul class="check-list">
+<li>집합 시간과 장소를 반드시 지킨다.</li>
+<li>탑승권, 신분증 등 필요한 물품을 미리 확인한다.</li>
+<li>보안 검색대에서는 장난을 치거나 불필요한 말을 하지 않는다.</li>
+<li>공항 안에서 개인행동을 하지 않고, 정해진 조와 함께 움직인다.</li>
+<li>이어폰을 낀 채 이동하지 않고, 교사와 안내 방송을 들을 수 있도록 한다.</li>
+</ul>
+<h3>② 기내에서 지켜야 할 사항</h3>
+<ul class="check-list">
+<li>좌석에 앉으면 승무원 안내에 따라 안전벨트를 착용한다.</li>
+<li>이륙·착륙 중에는 좌석 등받이와 테이블을 원위치에 둔다.</li>
+<li>기내 통로에서 장난치거나 불필요하게 서 있지 않는다.</li>
+<li>휴대폰은 항공기 모드 등 승무원 안내에 따라 사용한다.</li>
+<li>비상구, 구명조끼, 산소마스크 안내를 장난으로 여기지 않고 집중해서 듣는다.</li>
+</ul>
+<div class="safe-box">
+<b>기내 안전 안내는 왜 중요할까?</b>
+<p>대부분의 비행은 안전하게 이루어지지만, 비상 상황에서는 짧은 시간 안에 안내를 이해하고 행동해야 한다. 안전 안내를 미리 들어 두면 당황하지 않고 승무원의 지시에 따라 움직일 수 있다.</p>
+</div>
+<div class="activity">
+<h3>활동 2. 항공기 이동 체크</h3>
+<p>나에게 해당하는 준비 상태를 점검해 봅시다.</p>
+<div class="table-wrap">
+<table>
+<tr>
+<th>점검 내용</th>
+<th>예</th>
+<th>아니오</th>
+<th>보완할 점</th>
+</tr>
+<tr>
+<td>탑승에 필요한 신분증 또는 준비물을 확인했다.</td>
+<td class="center">□</td>
+<td class="center">□</td>
+<td></td>
+</tr>
+<tr>
+<td>공항에서 개인행동을 하지 않아야 함을 알고 있다.</td>
+<td class="center">□</td>
+<td class="center">□</td>
+<td></td>
+</tr>
+<tr>
+<td>기내 안전벨트 착용과 승무원 안내 준수의 중요성을 알고 있다.</td>
+<td class="center">□</td>
+<td class="center">□</td>
+<td></td>
+</tr>
+<tr>
+<td>휴대폰 사용 시 항공기 모드 등 안내를 따라야 함을 알고 있다.</td>
+<td class="center">□</td>
+<td class="center">□</td>
+<td></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section>
+<h2>3. 항공기 수하물 안전: 기내 반입 물품과 부치는 짐 구분하기</h2>
+<p>비행기를 이용할 때에는 “내가 가지고 가도 되는 물건인지”, “기내에 들고 타도 되는지”, “위탁수하물로 부쳐야 하는지”를 미리 확인해야 한다. 공항 보안검색 과정에서 금지 물품이 발견되면 물품을 버리거나, 다시 짐을 정리해야 하므로 전체 일정이 지연될 수 있다.</p>
+<div class="highlight">
+    핵심 원칙: 위험하거나 다른 승객에게 위해를 줄 수 있는 물품은 기내 반입이 제한된다. 액체류·젤류·스프레이류, 칼·가위·공구류, 인화성 물품, 보조배터리 등은 반드시 기준을 확인해야 한다.
+  </div>
+<h3>① 기내에 가지고 탈 수 없는 물품</h3>
+<p>다음 물품은 학생들이 실수로 가방에 넣기 쉬우므로 특히 주의해야 한다.</p>
+<div class="table-wrap">
+<table>
+<tr>
+<th>구분</th>
+<th>예시</th>
+<th>주의할 점</th>
+</tr>
+<tr>
+<td>액체류·젤류·스프레이류</td>
+<td>화장품 스프레이, 선스프레이, 향수, 샴푸, 치약 등</td>
+<td>국제선에서는 액체류 반입 기준이 엄격하다. 필요한 물품은 소량만 준비하고, 기준을 넘는 것은 위탁수하물에 넣는다.</td>
+</tr>
+<tr>
+<td>음식류 중 액체·젤 형태</td>
+<td>김치, 고추장, 액상 소스, 젤 형태 식품 등</td>
+<td>흐르거나 새는 음식류는 기내 반입이 제한될 수 있다. 여행 중 불필요한 음식은 가져가지 않는 것이 좋다.</td>
+</tr>
+<tr>
+<td>날카로운 물건</td>
+<td>접이식 칼, 문구용 칼, 커터칼, 가위 등</td>
+<td>학습용·문구용이라도 기내 반입이 제한될 수 있다. 필요하지 않으면 가져가지 않는다.</td>
+</tr>
+<tr>
+<td>공구류</td>
+<td>드라이버, 렌치, 펜치 등</td>
+<td>수학여행에 필요하지 않은 물품이므로 소지하지 않는다.</td>
+</tr>
+</table>
+</div>
+<div class="danger-box">
+<b>학생들이 자주 하는 실수</b>
+<p>세면도구 파우치에 작은 가위나 커터칼이 들어 있거나, 가방 앞주머니에 선스프레이·향수·치약을 넣은 채 보안검색대로 가는 경우가 있다. 여행 전날 반드시 가방 전체를 다시 확인해야 한다.</p>
+</div>
+<h3>② 위탁수하물로 부치면 안 되고, 직접 들고 타야 하는 물품</h3>
+<p>일부 물품은 반대로 큰 짐에 넣어 부치면 안 되고, 직접 휴대해야 한다. 특히 배터리류는 화재 위험 때문에 관리 기준이 엄격하다.</p>
+<div class="table-wrap">
+<table>
+<tr>
+<th>구분</th>
+<th>예시</th>
+<th>올바른 준비 방법</th>
+</tr>
+<tr>
+<td>보조배터리</td>
+<td>휴대용 충전기, 외장 배터리</td>
+<td>위탁수하물에 넣지 말고 직접 휴대한다. 용량 제한이 있을 수 있으므로 큰 용량 제품은 사전에 확인한다.</td>
+</tr>
+<tr>
+<td>전자담배</td>
+<td>전자담배 기기, 액상 기기</td>
+<td>학생은 소지 자체가 생활지도 대상이다. 수학여행 중 흡연 및 전자담배 소지는 절대 금지이다.</td>
+</tr>
+<tr>
+<td>라이터</td>
+<td>일회용 라이터 등</td>
+<td>흡연 관련 물품은 소지하지 않는다. 항공 보안과 학교 생활지도 모두에서 문제가 된다.</td>
+</tr>
+</table>
+</div>
+<div class="safe-box">
+<b>정리하면 이렇게 기억한다</b>
+<p><b>칼·가위·커터칼·공구류</b>는 기내에 들고 타지 않는다. <b>보조배터리</b>는 큰 짐에 부치지 않고 직접 휴대한다. <b>라이터·전자담배</b>는 수학여행에 절대 가져오지 않는다.</p>
+</div>
+<h3>③ 수학여행 전날 가방 점검표</h3>
+<div class="table-wrap">
+<table>
+<tr>
+<th>점검 문항</th>
+<th>확인</th>
+</tr>
+<tr>
+<td>가방 안에 커터칼, 접이식 칼, 작은 가위, 공구류가 없는지 확인했다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>치약, 샴푸, 화장품, 스프레이류 등 액체류·젤류 물품을 기준에 맞게 정리했다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>보조배터리는 위탁수하물에 넣지 않고 직접 휴대할 수 있도록 따로 챙겼다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>라이터, 전자담배 등 금지 물품을 절대 가져오지 않기로 확인했다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>공항 보안검색에서 문제가 될 만한 물품이 없는지 보호자와 함께 확인했다.</td>
+<td class="center">□</td>
+</tr>
+</table>
+</div>
+<div class="activity">
+<h3>활동. 기내 반입 가능 여부 판단하기</h3>
+<p>다음 물품을 보고, ① 기내 휴대 가능 ② 위탁수하물로 정리 ③ 가져오지 않음 중 하나를 골라 봅시다.</p>
+<div class="table-wrap">
+<table>
+<tr>
+<th>물품</th>
+<th>나의 판단</th>
+<th>이유</th>
+</tr>
+<tr>
+<td>보조배터리</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>커터칼</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>치약과 샴푸</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>전자담배</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>작은 가위</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+</div>
+<p class="small">※ 항공 보안 규정은 항공사, 공항, 국내선·국제선 여부에 따라 세부 기준이 달라질 수 있으므로 출발 전 학교 안내와 공항·항공사 안내를 반드시 확인한다.</p>
+</section><section>
+<h2>4. 멀미약 등 사전 건강 준비</h2>
+<p>장시간 버스 이동과 항공기 이동은 몸에 부담을 줄 수 있다. 특히 멀미, 두통, 복통, 어지럼증이 있는 학생은 여행 전 미리 준비해야 한다.</p>
+<div class="safety-rule">
+<div class="rule-label">건강 준비</div>
+<div class="rule-body">
+<b>멀미약은 ‘아플 때 즉시 먹는 약’이 아니라, 사전에 준비하고 복용 방법을 확인해야 하는 약이다.</b>
+<p>멀미가 심한 학생은 보호자와 상의하여 미리 준비하고, 약의 복용 시점과 주의 사항을 확인해야 한다. 친구의 약을 빌려 먹거나, 임의로 여러 약을 함께 먹어서는 안 된다.</p>
+</div>
+</div>
+<h3>여행 전 건강 준비 체크리스트</h3>
+<ul class="check-list">
+<li>멀미 경험이 있는지 스스로 확인한다.</li>
+<li>필요하면 보호자와 상의하여 멀미약을 준비한다.</li>
+<li>평소 복용하는 약이 있다면 여행 기간에 맞게 챙긴다.</li>
+<li>알레르기, 지병, 특별히 조심해야 할 건강 상태는 담임교사에게 미리 알린다.</li>
+<li>버스나 비행기에서 몸이 불편하면 참고 버티지 말고 즉시 교사에게 말한다.</li>
+</ul>
+<div class="danger-box">
+<b>주의</b>
+<p>약은 개인의 몸 상태에 따라 다르게 작용할 수 있다. 친구가 준 약을 “괜찮겠지” 하고 먹는 행동은 위험하다.</p>
+</div>
+</section>
+<section>
+<h2>5. 도로 이동 및 횡단보도 안전</h2>
+<p>관광지, 공항, 휴게소, 숙소 주변에서는 차량과 사람이 뒤섞여 이동하는 경우가 많다. 단체 이동 중에는 ‘나는 괜찮겠지’라는 생각보다 ‘내 행동이 전체 대열에 영향을 준다’는 인식이 필요하다.</p>
+<div class="safety-rule">
+<div class="rule-label">보행 안전</div>
+<div class="rule-body">
+<b>도로 이동 시 횡단보도를 이용하고, 무단횡단을 하지 않는다.</b>
+<p>가까워 보이는 길이라도 차량 운전자는 갑자기 튀어나오는 학생을 바로 발견하지 못할 수 있다. 특히 단체 이동 중 한 명이 뛰어나가면 다른 학생도 따라가려 하면서 연쇄 사고가 발생할 수 있다.</p>
+</div>
+</div>
+<h3>횡단보도 안전 5원칙</h3>
+<ol class="check-list">
+<li>멈춘다: 횡단보도 앞에서 일단 멈춘다.</li>
+<li>본다: 좌우 차량의 움직임을 확인한다.</li>
+<li>듣는다: 이어폰을 빼고 주변 소리를 듣는다.</li>
+<li>기다린다: 신호가 바뀌었다고 바로 뛰지 않는다.</li>
+<li>건넌다: 뛰지 않고 빠른 걸음으로 건넌다.</li>
+</ol>
+<div class="activity">
+<h3>활동 3. 위험한 장면 찾기</h3>
+<p>다음 상황에서 위험 요소를 3가지 이상 찾아봅시다.</p>
+<p><b>상황:</b> 공항에서 버스 주차장으로 이동하는 중이다. 한 학생은 이어폰을 끼고 휴대폰 화면을 보며 걷고 있고, 다른 학생은 친구와 장난치며 대열 밖으로 나간다. 횡단보도 신호가 깜박이자 몇 명이 뛰어서 건너려 한다.</p>
+<div class="long-blank"></div>
+</div>
+</section>
+<section>
+<h2>6. 이동 중 휴대폰 사용으로 인한 부주의 금지</h2>
+<p>휴대폰은 연락과 기록에 유용하지만, 이동 중에는 가장 큰 부주의 요인이 될 수 있다. 특히 도보 이동, 버스 승하차, 공항 이동 중에는 화면을 보는 행동을 줄여야 한다.</p>
+<div class="danger-box">
+<b>스마트폰 보행의 위험</b>
+<p>휴대폰 화면을 보며 걷는 동안에는 차량, 계단, 턱, 사람, 안내 방송, 교사의 지시를 놓치기 쉽다. 여행지에서는 익숙하지 않은 길을 이동하기 때문에 위험이 더 커진다.</p>
+</div>
+<h3>이동 중 휴대폰 사용 원칙</h3>
+<ul class="check-list">
+<li>도로, 횡단보도, 계단, 에스컬레이터에서는 휴대폰 화면을 보지 않는다.</li>
+<li>사진 촬영은 정해진 장소에서 멈춘 상태로 한다.</li>
+<li>이어폰을 양쪽 귀에 모두 꽂고 이동하지 않는다.</li>
+<li>교사의 안내와 방송을 들을 수 있도록 주변 소리에 주의한다.</li>
+<li>긴급 연락이 필요할 때는 안전한 장소에 멈춘 뒤 사용한다.</li>
+</ul>
+<div class="activity">
+<h3>활동 4. 나의 휴대폰 사용 약속</h3>
+<p>수학여행 이동 중 내가 지킬 휴대폰 사용 약속을 2가지 써 봅시다.</p>
+<p>① <span class="blank"></span></p>
+<p>② <span class="blank"></span></p>
+</div>
+</section>
+<section>
+<h2>7. 사례 분석: 이럴 때 어떻게 해야 할까?</h2>
+<div class="table-wrap">
+<table>
+<tr>
+<th>상황</th>
+<th>잘못된 행동</th>
+<th>올바른 행동</th>
+</tr>
+<tr>
+<td>버스가 출발했는데 안전벨트를 하지 않았다.</td>
+<td>“조금 있다가 해야지” 하고 그대로 있는다.</td>
+<td>즉시 안전벨트를 착용하고, 주변 친구에게도 착용 여부를 확인한다.</td>
+</tr>
+<tr>
+<td>멀미가 심해지기 시작했다.</td>
+<td>참다가 갑자기 토하거나, 친구 약을 빌려 먹는다.</td>
+<td>교사에게 즉시 알리고, 미리 준비한 개인 약과 물품을 사용한다.</td>
+</tr>
+<tr>
+<td>공항에서 친구들이 매점에 가자고 한다.</td>
+<td>말하지 않고 잠깐 다녀온다.</td>
+<td>개인행동을 하지 않고, 필요한 경우 교사에게 먼저 허락을 구한다.</td>
+</tr>
+<tr>
+<td>횡단보도 신호가 깜박인다.</td>
+<td>뛰어서 건너간다.</td>
+<td>다음 신호를 기다리고, 대열과 함께 이동한다.</td>
+</tr>
+<tr>
+<td>버스에서 심심해서 친구에게 장난을 걸고 싶다.</td>
+<td>물건을 던지거나 좌석을 흔든다.</td>
+<td>조용히 대화하거나, 음악·독서 등 안전한 방식으로 시간을 보낸다.</td>
+</tr>
+</table>
+</div>
+</section>
+<section>
+<h2>8. 형성평가</h2>
+<div class="quiz">
+<div class="quiz-item">
+<p>버스가 천천히 이동하는 구간에서는 안전벨트를 잠깐 풀어도 괜찮다. ( O / X )</p>
+<p class="answer">정답: X — 사고는 속도와 관계없이 갑작스럽게 발생할 수 있다.</p>
+</div>
+<div class="quiz-item">
+<p>멀미약은 친구가 먹는 약이면 나도 빌려 먹어도 된다. ( O / X )</p>
+<p class="answer">정답: X — 약은 개인의 건강 상태에 따라 다르게 작용하므로 임의로 복용하면 안 된다.</p>
+</div>
+<div class="quiz-item">
+<p>항공기 안에서는 승무원의 안전 안내를 집중해서 들어야 한다. ( O / X )</p>
+<p class="answer">정답: O — 비상 상황에서 올바르게 행동하기 위해 필요하다.</p>
+</div>
+<div class="quiz-item">
+<p>횡단보도 신호가 깜박이면 빨리 뛰어서 건너는 것이 가장 안전하다. ( O / X )</p>
+<p class="answer">정답: X — 뛰다 넘어지거나 차량과 충돌할 위험이 있으므로 다음 신호를 기다린다.</p>
+</div>
+<div class="quiz-item">
+<p>이동 중 휴대폰을 볼 때는 주변을 잘 보지 못하므로 사고 위험이 커진다. ( O / X )</p>
+<p class="answer">정답: O — 익숙하지 않은 여행지에서는 위험이 더 커진다.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>9. 나의 이동 안전 체크리스트</h2>
+<div class="table-wrap">
+<table>
+<tr>
+<th>점검 항목</th>
+<th>확인</th>
+</tr>
+<tr>
+<td>버스 탑승 시 안전벨트를 반드시 착용하겠다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>버스 운행 중 자리 이동, 장난, 큰 소리로 떠들기를 하지 않겠다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>멀미약 등 필요한 건강 준비를 보호자와 상의하여 미리 하겠다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>항공기 이용 시 공항과 기내의 안내를 잘 따르겠다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>도로 이동 시 횡단보도를 이용하고 무단횡단을 하지 않겠다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>이동 중 휴대폰 화면을 보며 걷지 않겠다.</td>
+<td class="center">□</td>
+</tr>
+<tr>
+<td>몸이 불편하거나 위험 상황을 발견하면 즉시 교사에게 알리겠다.</td>
+<td class="center">□</td>
+</tr>
+</table>
+</div>
+</section>
+<section>
+<h2>10. 마무리 안전 다짐문</h2>
+<div class="pledge">
+<p>나는 수학여행 중 버스, 항공기, 도보 이동에서 안전 수칙을 지키겠다. 안전벨트를 착용하고, 운행 중 장난이나 자리 이동을 하지 않으며, 횡단보도와 교통 신호를 지키겠다. 또한 이동 중 휴대폰 사용으로 주변을 살피지 못하는 일이 없도록 주의하고, 몸이 불편하거나 위험한 상황을 발견하면 즉시 선생님께 알리겠다.</p>
+<div class="signature">
+<div>날짜: <span></span></div>
+<div>이름: <span></span></div>
+</div>
+</div>
+</section>
+<section>
+<h2>11. 추가로 생각해 볼 질문</h2>
+<ol class="case-list">
+<li>버스 안에서 “친구들과 재미있게 노는 것”과 “안전하게 이동하는 것”은 어떻게 조화를 이룰 수 있을까?</li>
+<li>내가 이동 중 휴대폰을 자주 보게 되는 순간은 언제이며, 이를 줄이기 위한 방법은 무엇일까?</li>
+<li>단체 이동에서 한 사람의 행동이 전체 일정에 영향을 준 사례를 생각해 보자.</li>
+<li>공항과 항공기에서 지켜야 하는 규칙은 왜 평소보다 더 엄격하게 느껴질까?</li>
+</ol>
+<p class="small">2026학년도 전주한일고등학교 1학년 수학여행</p>
+</section>
+</div>
+</body>
+</html>

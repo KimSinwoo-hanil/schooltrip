@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수학여행 사전 안전교육 8차시 - 생활 규정 준수</title>
+  <style>
+    :root {
+      --main: #7f1d1d;
+      --sub: #fff1f2;
+      --accent: #f97316;
+      --danger: #b91c1c;
+      --warning: #d97706;
+      --safe: #0f766e;
+      --rule: #111827;
+      --gray: #f6f7f9;
+      --text: #222;
+      --line: #d9e2ec;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fff1f2 0%, #ffffff 42%);
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 24px 60px;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #7f1d1d, #f97316);
+      color: white;
+      border-radius: 24px;
+      padding: 38px 36px;
+      box-shadow: 0 14px 35px rgba(127, 29, 29, 0.24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "🚭 🛑 🤝";
+      position: absolute;
+      right: 28px;
+      bottom: 18px;
+      font-size: 52px;
+      opacity: 0.28;
+      letter-spacing: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 12px;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+
+    .info-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    section {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(35, 55, 80, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--main);
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      border-left: 7px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #7f1d1d;
+      font-size: 19px;
+    }
+
+    p { margin: 8px 0; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 6px 0; }
+
+    .highlight {
+      background: #ffedd5;
+      border-left: 5px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin: 14px 0;
+      font-weight: 700;
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 14px;
+      background: var(--sub);
+      border: 1px solid #fecdd3;
+      border-radius: 18px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .principle-label {
+      font-weight: 900;
+      color: white;
+      background: var(--main);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 78px;
+      padding: 8px;
+    }
+
+    .danger-label { background: var(--danger); }
+    .warning-label { background: var(--warning); }
+    .safe-label { background: var(--safe); }
+    .rule-label { background: var(--rule); }
+
+    .principle-body b { color: #7f1d1d; }
+
+    .danger-box {
+      border: 2px solid #ef4444;
+      background: #fff1f1;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .danger-box b { color: var(--danger); }
+
+    .safe-box {
+      border: 1px solid #b9e6df;
+      background: #effbf9;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .safe-box b { color: #13766d; }
+
+    .rule-box {
+      border: 2px solid #111827;
+      background: #f3f4f6;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .rule-box b { color: #111827; }
+
+    .three-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .red-card {
+      background: #fff1f2;
+      border: 2px solid #fecdd3;
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .red-card h3 {
+      margin-top: 0;
+      color: #b91c1c;
+      font-size: 18px;
+    }
+
+    .activity {
+      background: var(--gray);
+      border: 1px dashed #aab7c4;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 16px 0;
+    }
+
+    .long-blank {
+      display: block;
+      min-height: 72px;
+      border: 1px solid #c7d0da;
+      background: white;
+      border-radius: 12px;
+      margin-top: 8px;
+      padding: 10px;
+    }
+
+    .short-blank {
+      display: inline-block;
+      min-width: 130px;
+      border-bottom: 2px solid #555;
+      height: 1.2em;
+      vertical-align: baseline;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      font-size: 15px;
+    }
+
+    th {
+      background: #7f1d1d;
+      color: white;
+      padding: 11px;
+      border: 1px solid #7f1d1d;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid #d5dde6;
+      padding: 11px;
+      vertical-align: top;
+    }
+
+    .center { text-align: center; }
+
+    .small {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .scenario {
+      border: 1px solid #d9e2ec;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 14px 0;
+      background: #ffffff;
+    }
+
+    .scenario-title {
+      font-weight: 900;
+      color: var(--main);
+      margin-bottom: 6px;
+    }
+
+    .quiz { counter-reset: q; }
+
+    .quiz-item {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid #d9e2ec;
+      background: #ffffff;
+    }
+
+    .quiz-item::before {
+      counter-increment: q;
+      content: "문제 " counter(q);
+      display: inline-block;
+      background: var(--accent);
+      color: #222;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .answer {
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .pledge {
+      background: linear-gradient(135deg, #fff1f2, #ffffff);
+      border: 2px solid #f97316;
+      border-radius: 20px;
+      padding: 22px;
+      font-weight: 600;
+    }
+
+    .signature {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .signature span {
+      min-width: 170px;
+      border-bottom: 1px solid #333;
+      display: inline-block;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { max-width: none; padding: 0; }
+      section, .cover { box-shadow: none; break-inside: avoid; }
+      .cover, th, .principle-label {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .info-grid, .three-grid { grid-template-columns: 1fr; }
+      .principle { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cover">
+      <div class="badge">수학여행 사전 안전교육 8차시</div>
+      <h1>Ⅷ. 생활 규정 준수</h1>
+      <p class="subtitle">흡연·폭력·타교 학생과의 마찰을 절대 예방하는 강력 생활지도 교육</p>
+
+      <div class="info-grid">
+      </div>
+    </header>
+
+    <section>
+      <h2>1. 생활 규정을 지키는 것이 중요한 이유</h2>
+      <p>수학여행은 학교 밖에서 이루어지지만, 학교 교육과정의 일부이다. 따라서 학생은 교실 안에서와 마찬가지로 학교의 생활 규정과 공동체 질서를 지켜야 한다. 특히 여행지에서는 다른 학생, 다른 학교, 지역 주민, 숙소와 식당 직원, 관광지 이용객이 함께 있으므로 한 사람의 행동이 학교 전체의 모습으로 비칠 수 있다.</p>
+
+      <div class="highlight">
+        수학여행 생활 규정의 핵심은 “내 행동이 나 자신, 친구, 학급, 학교 전체에 영향을 준다”는 책임 의식이다.
+      </div>
+
+      <h3>생활 규정 위반이 가져올 수 있는 결과</h3>
+      <ul>
+        <li>본인의 수학여행 참여가 중단되거나 보호자 연락, 귀가 조치가 필요할 수 있다.</li>
+        <li>친구들과 학급 전체의 일정이 지연되거나 분위기가 크게 나빠질 수 있다.</li>
+        <li>생활교육위원회 회부 등 학교 규정에 따른 엄중한 처분을 받을 수 있다.</li>
+        <li>폭력, 절도, 협박, 모욕 등은 학교 생활지도 사안을 넘어 법적 문제로 이어질 수 있다.</li>
+        <li>학교 이름과 학생 전체의 이미지가 손상될 수 있다.</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>가장 중요한 절대 금지 3대 사안</b>
+        <p>① 흡연 절대 금지 ② 친구 간 폭력 절대 금지 ③ 다른 학교 학생과의 마찰 절대 금지. 이 세 가지는 수학여행 중 가장 강하게 지도해야 할 핵심 생활 규정이다.</p>
+      </div>
+
+      <div class="three-grid">
+        <div class="red-card">
+          <h3>🚭 흡연 절대 금지</h3>
+          <p>소지, 시도, 동조, 은폐 모두 심각한 문제이다.</p>
+        </div>
+        <div class="red-card">
+          <h3>🛑 폭력 절대 금지</h3>
+          <p>친구 사이의 신체적·언어적 폭력은 절대 허용되지 않는다.</p>
+        </div>
+        <div class="red-card">
+          <h3>⚠️ 타교 마찰 금지</h3>
+          <p>다른 학교 학생과의 시비, 말다툼, 도발, 싸움은 절대 금지이다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 흡연 절대 금지</h2>
+
+      <div class="principle">
+        <div class="principle-label danger-label">원칙 1<br>흡연 금지</div>
+        <div class="principle-body">
+          <b>수학여행 중 흡연은 절대 금지이다.</b>
+          <p>담배, 전자담배, 액상형 전자담배, 가열식 담배, 라이터 등 흡연과 관련된 물품을 소지하거나 사용하는 행동은 학교 생활 규정을 심각하게 위반하는 행위이다.</p>
+        </div>
+      </div>
+
+      <div class="danger-box">
+        <b>위반 시 조치</b>
+        <p>흡연 관련 위반은 생활교육위원회에 회부될 수 있으며, 가장 무거운 수준의 징계가 가능하다. “한 번만”, “친구가 권해서”, “피우지는 않고 가지고만 있었다”는 말로 정당화될 수 없다.</p>
+      </div>
+
+      <h3>흡연 관련 금지 행동</h3>
+      <ul>
+        <li>담배 또는 전자담배를 피우는 행동</li>
+        <li>담배, 전자담배, 라이터, 액상 등을 소지하는 행동</li>
+        <li>친구에게 담배를 권하거나 빌려주는 행동</li>
+        <li>친구의 흡연을 숨겨 주거나 망을 봐 주는 행동</li>
+        <li>숙소, 화장실, 계단, 외부 공간에서 몰래 흡연을 시도하는 행동</li>
+        <li>흡연 장면을 촬영하거나 SNS에 올리는 행동</li>
+        <li>흡연 사실을 숨기기 위해 거짓말하거나 증거를 없애려는 행동</li>
+      </ul>
+
+      <div class="safe-box">
+        <b>친구가 흡연을 권할 때</b>
+        <p>“나는 절대 안 해.”, “이건 생활교육위원회 사안이야.”, “지금 선생님께 말씀드리자.”라고 분명하게 거절해야 한다. 친구를 따라가는 것도 동조로 보일 수 있으므로 즉시 자리를 피하고 교사에게 알린다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 1. 흡연 권유 거절 문장 만들기</h3>
+        <p>친구가 “잠깐만 나가서 피우자”고 말했을 때 사용할 수 있는 단호한 거절 문장을 2가지 써 봅시다.</p>
+        <p>① <span class="short-blank"></span></p>
+        <p>② <span class="short-blank"></span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 친구 간 폭력 절대 금지</h2>
+
+      <div class="principle">
+        <div class="principle-label danger-label">원칙 2<br>폭력 금지</div>
+        <div class="principle-body">
+          <b>친구 간 신체적 폭력, 언어폭력, 위협, 집단 괴롭힘은 절대 금지된다.</b>
+          <p>수학여행 중에는 피곤함, 장난, 감정 다툼, 방 배정, 사진 촬영, 소지품 문제 등으로 갈등이 생길 수 있다. 그러나 어떤 이유로도 폭력은 정당화될 수 없다.</p>
+        </div>
+      </div>
+
+      <div class="danger-box">
+        <b>위반 시 조치</b>
+        <p>친구 간 폭력은 생활교육위원회에 회부될 수 있으며, 가장 무거운 수준의 징계가 가능하다. 사안에 따라 학교폭력 사안 처리 및 법적 책임으로 이어질 수 있다.</p>
+      </div>
+
+      <h3>폭력에 해당할 수 있는 행동</h3>
+      <ul>
+        <li>때리기, 밀기, 발로 차기, 목 조르기, 물건 던지기</li>
+        <li>장난이라며 친구를 넘어뜨리거나 위협하는 행동</li>
+        <li>욕설, 모욕, 협박, 비하 표현을 반복하는 행동</li>
+        <li>친구를 둘러싸고 몰아붙이거나 겁주는 행동</li>
+        <li>친구의 물건을 빼앗거나 숨기며 괴롭히는 행동</li>
+        <li>싸움을 부추기거나 촬영하거나 응원하는 행동</li>
+        <li>단체 채팅방에서 한 친구를 공격하거나 조롱하는 행동</li>
+      </ul>
+
+      <div class="rule-box">
+        <b>장난과 폭력의 경계</b>
+        <p>상대가 아프거나 무섭거나 불쾌하다고 느끼면 그것은 장난이 아니다. 특히 신체를 건드리는 장난, 힘을 이용한 장난, 여러 명이 한 명을 몰아붙이는 행동은 폭력이 될 수 있다.</p>
+      </div>
+
+      <div class="safe-box">
+        <b>싸움이 생기려 할 때 행동 요령</b>
+        <ol>
+          <li>맞대응하지 않고 즉시 거리를 둔다.</li>
+          <li>욕설이나 도발적 말을 하지 않는다.</li>
+          <li>친구들이 몰려들면 구경하거나 촬영하지 않고 떨어진다.</li>
+          <li>가까운 담임교사 또는 인솔교사에게 즉시 알린다.</li>
+          <li>피해 학생이 있으면 안전한 곳으로 이동하도록 돕는다.</li>
+        </ol>
+      </div>
+
+      <div class="activity">
+        <h3>활동 2. 폭력 상황 멈추기</h3>
+        <p>친구 둘이 말다툼을 하다가 몸싸움 직전까지 갔다. 주변 친구들은 휴대폰으로 촬영하려 한다. 이때 내가 해야 할 행동을 써 봅시다.</p>
+        <div class="long-blank"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 다른 학교 학생과의 마찰 절대 금지</h2>
+
+      <div class="principle">
+        <div class="principle-label danger-label">원칙 3<br>타교 마찰 금지</div>
+        <div class="principle-body">
+          <b>여행지에서 만나는 다른 학교 학생에게 시비를 걸거나, 말다툼하거나, 도발하거나, 싸우는 행동은 절대 금지된다.</b>
+          <p>수학여행지에는 여러 학교 학생들이 동시에 방문할 수 있다. 서로 장난처럼 시작한 말도 학교 간 갈등으로 커질 수 있으며, 학교의 명예와 안전을 해칠 수 있다.</p>
+        </div>
+      </div>
+
+      <div class="danger-box">
+        <b>위반 시 조치</b>
+        <p>다른 학교 학생과의 마찰은 생활교육위원회에 회부될 수 있으며, 가장 무거운 수준의 징계가 가능하다. 학교 간 문제, 보호자 민원, 경찰 신고 등으로 확대될 수 있으므로 절대 발생해서는 안 된다.</p>
+      </div>
+
+      <h3>타교 학생과의 마찰에 해당할 수 있는 행동</h3>
+      <ul>
+        <li>눈이 마주쳤다는 이유로 시비를 거는 행동</li>
+        <li>다른 학교 학생의 외모, 말투, 교복, 행동을 비웃는 행동</li>
+        <li>일부러 부딪히거나 길을 막는 행동</li>
+        <li>욕설, 손가락질, 비하 표현, 도발적 표정을 하는 행동</li>
+        <li>SNS나 단체 채팅방에서 다른 학교 학생을 조롱하는 행동</li>
+        <li>다른 학교 학생과 말다툼이 생겼는데 친구들을 불러 모으는 행동</li>
+        <li>타교 학생과의 갈등 장면을 촬영하거나 공유하는 행동</li>
+      </ul>
+
+      <div class="safe-box">
+        <b>타교 학생과 마찰이 생길 것 같을 때</b>
+        <p>눈을 피하고 지나가기, 말대꾸하지 않기, 친구를 데리고 자리를 벗어나기, 즉시 교사에게 알리기가 가장 안전한 행동이다. “지는 것 같아서 못 참겠다”는 생각보다 “학교 전체를 지키겠다”는 생각이 중요하다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 3. 타교 학생과의 갈등 피하기</h3>
+        <p>다음 상황에서 올바른 행동을 써 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>상황</th>
+              <th>올바른 행동</th>
+            </tr>
+            <tr>
+              <td>다른 학교 학생이 지나가며 우리를 쳐다보고 웃었다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>친구가 “저 학교 애들 왜 저래?”라고 크게 말하려 한다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>다른 학교 학생과 어깨가 부딪혔다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>타교 학생과 친구가 말다툼을 시작했다.</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 생활 규정은 ‘안 보이면 괜찮다’가 아니다</h2>
+      <p>수학여행 중 생활 규정을 어기는 학생들은 종종 “선생님이 안 보면 괜찮다”, “잠깐이면 들키지 않는다”, “친구들끼리만 알면 된다”고 생각한다. 그러나 이런 생각이 가장 위험하다. 규정 준수는 감시를 피하기 위한 행동이 아니라, 학생으로서 스스로 지켜야 할 책임이다.</p>
+
+      <div class="principle">
+        <div class="principle-label rule-label">원칙 4<br>자기 통제</div>
+        <div class="principle-body">
+          <b>교사가 보지 않아도 생활 규정을 지키는 것이 진짜 책임 있는 태도이다.</b>
+          <p>숙소, 화장실, 계단, 버스 안, 관광지, 공항, 식당, 단체 채팅방에서도 같은 규정이 적용된다. 장소가 바뀌어도 학생의 책임은 사라지지 않는다.</p>
+        </div>
+      </div>
+
+      <h3>특히 주의해야 할 장소</h3>
+      <ul>
+        <li><b>숙소</b>: 야간 소란, 무단 이동, 흡연 시도, 친구 간 갈등이 생기기 쉬운 곳</li>
+        <li><b>화장실·계단</b>: 교사 시야에서 벗어나기 쉬워 규정 위반이 발생하기 쉬운 곳</li>
+        <li><b>버스</b>: 말다툼, 장난, 물건 던지기, 좌석 갈등이 생길 수 있는 곳</li>
+        <li><b>관광지</b>: 타교 학생과 마주칠 가능성이 높은 곳</li>
+        <li><b>공항·식당</b>: 일반 이용객에게 학교의 모습이 보이는 공공장소</li>
+        <li><b>SNS·단체 채팅방</b>: 말과 행동이 기록으로 남는 온라인 공간</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>은폐와 동조도 문제입니다</b>
+        <p>흡연, 폭력, 타교 학생과의 마찰을 목격하고도 숨겨 주거나, 망을 보거나, 촬영하거나, 응원하거나, 단체 채팅방에서 부추기는 행동 역시 심각한 문제이다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. 위반 상황을 목격했을 때 행동 요령</h2>
+      <p>친구의 잘못을 교사에게 알리는 것은 친구를 곤란하게 하려는 행동이 아니라, 더 큰 사고와 징계를 막기 위한 보호 행동이다. 특히 흡연, 폭력, 타교 학생과의 마찰은 빠르게 멈추지 않으면 심각한 문제로 커질 수 있다.</p>
+
+      <div class="principle">
+        <div class="principle-label safe-label">원칙 5<br>즉시 알림</div>
+        <div class="principle-body">
+          <b>위험하거나 규정을 위반하는 상황을 보면 즉시 교사에게 알린다.</b>
+          <p>학생이 혼자 해결하려고 하다가 오히려 상황이 악화될 수 있다. 교사에게 알리는 것이 가장 안전하고 정확한 대처이다.</p>
+        </div>
+      </div>
+
+      <h3>목격 시 4단계</h3>
+      <ol>
+        <li><b>가담하지 않는다</b>: 함께 웃거나, 찍거나, 따라가지 않는다.</li>
+        <li><b>자리를 분리한다</b>: 위험한 상황에서 물러나고 친구도 데리고 나온다.</li>
+        <li><b>교사에게 알린다</b>: 담임교사 또는 가까운 인솔교사에게 즉시 알린다.</li>
+        <li><b>확산하지 않는다</b>: SNS나 단체 채팅방에 올리지 않는다.</li>
+      </ol>
+
+      <div class="activity">
+        <h3>활동 4. 교사에게 알리는 문장 만들기</h3>
+        <p>다음 상황을 교사에게 알리는 문장을 작성해 봅시다. 감정적인 표현보다 장소, 상황, 관련 행동을 정확히 말하는 것이 중요합니다.</p>
+        <div class="scenario">
+          <div class="scenario-title">상황</div>
+          <p>숙소 계단 쪽에서 친구 몇 명이 흡연을 하려는 것 같고, 다른 친구 한 명이 “선생님 오시는지 봐 줘”라고 말했다.</p>
+          <p><b>내가 교사에게 알릴 문장:</b></p>
+          <div class="long-blank"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. 상황별 올바른 대처</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>상황</th>
+            <th>잘못된 행동</th>
+            <th>올바른 행동</th>
+            <th>이유</th>
+          </tr>
+          <tr>
+            <td>친구가 담배나 전자담배를 가져왔다고 말한다.</td>
+            <td>재미있어하며 구경하거나 숨겨 준다.</td>
+            <td>즉시 거리를 두고 교사에게 알린다.</td>
+            <td>소지 자체가 심각한 생활지도 사안이다.</td>
+          </tr>
+          <tr>
+            <td>친구끼리 말다툼이 심해지고 있다.</td>
+            <td>옆에서 부추기거나 촬영한다.</td>
+            <td>싸움을 말리려 무리하지 말고 교사에게 알린다.</td>
+            <td>폭력으로 번지기 전에 멈추어야 한다.</td>
+          </tr>
+          <tr>
+            <td>다른 학교 학생이 기분 나쁘게 쳐다본다.</td>
+            <td>같이 노려보거나 욕한다.</td>
+            <td>반응하지 않고 자리를 벗어난다.</td>
+            <td>불필요한 마찰을 피하는 것이 가장 안전하다.</td>
+          </tr>
+          <tr>
+            <td>친구가 “선생님 안 보니까 괜찮아”라고 말한다.</td>
+            <td>같이 규정을 어긴다.</td>
+            <td>안 된다고 말하고 상황을 피한다.</td>
+            <td>규정은 감시 여부와 상관없이 지켜야 한다.</td>
+          </tr>
+          <tr>
+            <td>타교 학생과 친구가 말싸움을 시작했다.</td>
+            <td>우리 학교 친구를 도와준다며 함께 다가간다.</td>
+            <td>친구를 데리고 떨어지고 교사에게 알린다.</td>
+            <td>학교 간 갈등으로 커질 수 있다.</td>
+          </tr>
+          <tr>
+            <td>규정 위반 장면을 친구가 촬영했다.</td>
+            <td>단체방에 올리라고 한다.</td>
+            <td>공유하지 말고 교사에게 알린다.</td>
+            <td>SNS 확산은 2차 문제를 만든다.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. 생활 규정 위반이 ‘가장 무거운 수준의 징계’로 이어질 수 있는 이유</h2>
+      <p>흡연, 폭력, 타교 학생과의 마찰은 단순한 실수나 장난으로 보기 어렵다. 이 세 가지는 학생 개인의 안전, 친구의 피해, 학교의 책임, 외부 기관과의 문제까지 연결될 수 있기 때문에 매우 엄중하게 다루어진다.</p>
+
+      <div class="rule-box">
+        <b>강력한 규제가 필요한 이유</b>
+        <ul>
+          <li><b>흡연</b>: 학생 건강, 법적·규정상 문제, 숙소·공공장소 안전 문제와 연결된다.</li>
+          <li><b>친구 간 폭력</b>: 피해 학생의 신체와 정서에 직접적 피해를 주며 학교폭력 사안으로 확대될 수 있다.</li>
+          <li><b>타교 학생과의 마찰</b>: 학교 간 갈등, 민원, 경찰 신고, 학교 이미지 훼손으로 이어질 수 있다.</li>
+        </ul>
+      </div>
+
+      <div class="danger-box">
+        <b>최종 확인</b>
+        <p>흡연, 친구 간 폭력, 다른 학교 학생과의 마찰은 위반 시 생활교육위원회에 회부될 수 있으며, 가장 무거운 수준의 징계가 가능하다. 이 세 가지는 “절대 하지 않는다”가 유일한 정답이다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 5. 절대 금지 3대 사안 정리하기</h3>
+        <p>오늘 배운 절대 금지 3대 사안과 그 이유를 정리해 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>절대 금지 사안</th>
+              <th>왜 절대 금지인가?</th>
+              <th>위험 상황에서 내가 할 행동</th>
+            </tr>
+            <tr>
+              <td>흡연</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>친구 간 폭력</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>다른 학교 학생과의 마찰</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. 형성평가</h2>
+      <div class="quiz">
+        <div class="quiz-item">
+          <p>수학여행 중 흡연은 절대 금지이며, 위반 시 생활교육위원회 회부 및 가장 무거운 수준의 징계가 가능하다. ( O / X )</p>
+          <p class="answer">정답: O — 흡연은 강력한 규제가 필요한 핵심 생활지도 사안이다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>담배를 피우지 않고 가지고만 있는 것은 큰 문제가 아니다. ( O / X )</p>
+          <p class="answer">정답: X — 흡연 관련 물품 소지도 심각한 생활지도 사안이 될 수 있다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>친구 간 폭력은 장난으로 시작했더라도 피해가 발생하면 심각한 문제가 될 수 있다. ( O / X )</p>
+          <p class="answer">정답: O — 상대가 아프거나 두려움을 느끼면 폭력이 될 수 있다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>다른 학교 학생이 먼저 기분 나쁘게 행동했다면 맞대응해도 된다. ( O / X )</p>
+          <p class="answer">정답: X — 맞대응은 갈등을 키우므로 자리를 벗어나고 교사에게 알려야 한다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>흡연, 폭력, 타교 학생과의 마찰을 목격했을 때 숨겨 주는 행동도 문제가 될 수 있다. ( O / X )</p>
+          <p class="answer">정답: O — 은폐, 동조, 촬영, 부추김도 심각한 문제이다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>생활 규정은 교사가 보는 곳에서만 지키면 된다. ( O / X )</p>
+          <p class="answer">정답: X — 규정 준수는 감시가 아니라 학생 스스로의 책임이다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. 나의 생활 규정 준수 체크리스트</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>점검 항목</th>
+            <th>확인</th>
+          </tr>
+          <tr>
+            <td>수학여행 중 흡연을 절대 하지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>담배, 전자담배, 라이터 등 흡연 관련 물품을 절대 소지하지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>흡연 위반 시 생활교육위원회 회부 및 가장 무거운 수준의 징계가 가능함을 이해한다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>친구에게 신체적 폭력, 언어폭력, 위협, 괴롭힘을 절대 하지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>친구 간 폭력 위반 시 생활교육위원회 회부 및 가장 무거운 수준의 징계가 가능함을 이해한다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>다른 학교 학생에게 시비, 조롱, 도발, 말다툼, 싸움을 절대 하지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>다른 학교 학생과의 마찰 위반 시 생활교육위원회 회부 및 가장 무거운 수준의 징계가 가능함을 이해한다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>규정 위반 상황을 목격하면 숨기거나 촬영하지 않고 즉시 교사에게 알리겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>학교 밖에서도 학교의 명예와 학생으로서의 책임을 지키겠다.</td>
+            <td class="center">□</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>11. 마무리 생활 규정 준수 다짐문</h2>
+      <div class="pledge">
+        <p>나는 수학여행이 학교 교육과정의 일부임을 이해하고, 학교 밖에서도 생활 규정을 철저히 지키겠다. 특히 흡연, 친구 간 폭력, 다른 학교 학생과의 마찰은 절대 하지 않겠다. 흡연 관련 물품을 소지하거나 사용하지 않고, 친구에게 신체적·언어적 폭력을 행사하지 않으며, 다른 학교 학생에게 시비를 걸거나 말다툼하지 않겠다. 이 세 가지 사안은 위반 시 생활교육위원회에 회부될 수 있고 가장 무거운 수준의 징계가 가능함을 분명히 이해한다. 또한 규정 위반 상황을 목격하면 숨기거나 동조하지 않고 즉시 교사에게 알리며, 나와 친구, 학급과 학교의 명예를 지키는 책임 있는 학생으로 행동하겠다.</p>
+        <div class="signature">
+          <div>날짜: <span></span></div>
+          <div>이름: <span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>12. 추가로 생각해 볼 질문</h2>
+      <ol>
+        <li>흡연, 폭력, 타교 학생과의 마찰이 다른 생활 규정 위반보다 더 강하게 지도되어야 하는 이유는 무엇일까?</li>
+        <li>친구의 잘못을 숨겨 주는 것이 왜 진짜 우정이 아닐 수 있을까?</li>
+        <li>다른 학교 학생과의 갈등 상황에서 맞대응하지 않는 태도는 왜 성숙한 행동일까?</li>
+        <li>생활 규정을 지키는 태도와 학교의 명예는 어떻게 연결될까?</li>
+        <li>교사가 보지 않는 상황에서도 스스로 규정을 지키기 위해 필요한 마음가짐은 무엇일까?</li>
+      </ol>
+      <p class="small">2026학년도 전주한일고등학교 1학년 수학여행</p>
+    </section>
+  </div>
+</body>
+</html>

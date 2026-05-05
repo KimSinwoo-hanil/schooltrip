@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수학여행 사전 안전교육 3차시 - 숙소 안전 및 생활 질서</title>
+  <style>
+    :root {
+      --main: #3f5f73;
+      --sub: #eef7fb;
+      --accent: #e76f51;
+      --danger: #c1121f;
+      --safe: #2a9d8f;
+      --gray: #f6f7f9;
+      --text: #222;
+      --line: #d9e2ec;
+      --night: #243b53;
+      --meal: #f9c74f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f0f8fb 0%, #ffffff 42%);
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 24px 60px;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #3f5f73, #e76f51);
+      color: white;
+      border-radius: 24px;
+      padding: 38px 36px;
+      box-shadow: 0 14px 35px rgba(63, 95, 115, 0.24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "🏨 🔥 🌙";
+      position: absolute;
+      right: 28px;
+      bottom: 18px;
+      font-size: 52px;
+      opacity: 0.28;
+      letter-spacing: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 12px;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+
+    .info-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    section {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(35, 55, 80, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--main);
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      border-left: 7px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #173b6d;
+      font-size: 19px;
+    }
+
+    p { margin: 8px 0; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 6px 0; }
+
+    .highlight {
+      background: #fff0eb;
+      border-left: 5px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin: 14px 0;
+      font-weight: 650;
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 14px;
+      background: var(--sub);
+      border: 1px solid #c8dcf7;
+      border-radius: 18px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .principle-label {
+      font-weight: 900;
+      color: white;
+      background: var(--main);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 78px;
+      padding: 8px;
+    }
+
+    .fire-label { background: var(--danger); }
+    .night-label { background: var(--night); }
+    .meal-label { background: #9a6b00; }
+    .clean-label { background: var(--safe); }
+
+    .principle-body b { color: #0f3460; }
+
+    .danger-box {
+      border: 1px solid #f2b4b4;
+      background: #fff1f1;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .danger-box b { color: var(--danger); }
+
+    .safe-box {
+      border: 1px solid #b9e6df;
+      background: #effbf9;
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin: 14px 0;
+    }
+
+    .safe-box b { color: #13766d; }
+
+    .night-box {
+      border: 2px solid #314e68;
+      background: #f2f6fa;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .meal-box {
+      border: 2px solid #f9c74f;
+      background: #fff9df;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .activity {
+      background: var(--gray);
+      border: 1px dashed #aab7c4;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 16px 0;
+    }
+
+    .long-blank {
+      display: block;
+      min-height: 72px;
+      border: 1px solid #c7d0da;
+      background: white;
+      border-radius: 12px;
+      margin-top: 8px;
+      padding: 10px;
+    }
+
+    .short-blank {
+      display: inline-block;
+      min-width: 130px;
+      border-bottom: 2px solid #555;
+      height: 1.2em;
+      vertical-align: baseline;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      font-size: 15px;
+    }
+
+    th {
+      background: #3f5f73;
+      color: white;
+      padding: 11px;
+      border: 1px solid #3f5f73;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid #d5dde6;
+      padding: 11px;
+      vertical-align: top;
+    }
+
+    .center { text-align: center; }
+
+    .small {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .scenario {
+      border: 1px solid #d9e2ec;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 14px 0;
+      background: #ffffff;
+    }
+
+    .scenario-title {
+      font-weight: 900;
+      color: var(--main);
+      margin-bottom: 6px;
+    }
+
+    .quiz { counter-reset: q; }
+
+    .quiz-item {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid #d9e2ec;
+      background: #ffffff;
+    }
+
+    .quiz-item::before {
+      counter-increment: q;
+      content: "문제 " counter(q);
+      display: inline-block;
+      background: var(--accent);
+      color: #222;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .answer {
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .pledge {
+      background: linear-gradient(135deg, #fff0eb, #ffffff);
+      border: 2px solid #e76f51;
+      border-radius: 20px;
+      padding: 22px;
+      font-weight: 600;
+    }
+
+    .signature {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .signature span {
+      min-width: 170px;
+      border-bottom: 1px solid #333;
+      display: inline-block;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { max-width: none; padding: 0; }
+      section, .cover { box-shadow: none; break-inside: avoid; }
+      .cover, th, .principle-label {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .info-grid { grid-template-columns: repeat(2, 1fr); }
+      .principle { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cover">
+      <div class="badge">수학여행 사전 안전교육 3차시</div>
+      <h1>Ⅲ. 숙소 안전 및 생활 질서</h1>
+      <p class="subtitle">사고 예방과 공동생활 질서를 함께 지키는 숙소 생활 안전교육</p>
+
+      <div class="info-grid">
+      </div>
+    </header>
+
+    <section>
+      <h2>1. 숙소는 어떤 공간인가?</h2>
+      <p>수학여행에서 숙소는 단순히 잠만 자는 곳이 아니다. 하루 동안의 이동과 체험으로 쌓인 피로를 해소하고, 다음 날 일정을 안전하게 이어가기 위해 몸과 마음을 회복하는 공간이다. 동시에 여러 학생이 함께 생활하는 공동생활 공간이므로, 나의 행동이 같은 방 친구와 다른 투숙객에게 직접적인 영향을 준다.</p>
+
+      <div class="highlight">
+        숙소 생활의 핵심은 “편하게 쉬되, 다른 사람의 휴식과 안전을 방해하지 않는 것”이다.
+      </div>
+
+      <h3>숙소 생활에서 특히 중요한 세 가지</h3>
+      <ul>
+        <li><b>안전</b>: 화재, 낙상, 무단 외출, 장난으로 인한 사고를 예방한다.</li>
+        <li><b>질서</b>: 취침 시간, 식사 시간, 객실 이동 제한, 인솔교사 지시를 지킨다.</li>
+        <li><b>배려</b>: 같은 방 친구와 다른 투숙객에게 소음, 어지러움, 불쾌감을 주지 않는다.</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>주의</b>
+        <p>숙소에서의 문제는 밤 시간대에 발생하기 쉽다. 피곤함, 들뜬 분위기, 친구들과의 장난이 겹치면 작은 행동도 안전사고나 생활지도 사안으로 커질 수 있다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 숙소 내 화재 발생 시 대피 요령 숙지</h2>
+
+      <div class="principle">
+        <div class="principle-label fire-label">원칙 1<br>화재 대피</div>
+        <div class="principle-body">
+          <b>불이 나면 물건을 챙기지 말고, 낮은 자세로 신속하게 대피한다.</b>
+          <p>화재 상황에서 가장 위험한 것은 불꽃보다 연기일 수 있다. 연기는 빠르게 퍼지고 시야를 가리며 호흡을 어렵게 만든다. 따라서 화재 경보가 울리거나 연기 냄새가 나면 즉시 교사와 숙소 직원의 안내에 따라 대피해야 한다.</p>
+        </div>
+      </div>
+
+      <h3>화재 발생 시 행동 순서</h3>
+      <ol>
+        <li><b>알린다</b>: 화재, 연기, 타는 냄새를 발견하면 즉시 주변 친구와 교사에게 알린다.</li>
+        <li><b>물건을 포기한다</b>: 휴대폰, 지갑, 가방을 챙기려다 대피 시간이 늦어지면 안 된다.</li>
+        <li><b>낮은 자세로 이동한다</b>: 연기가 있을 때는 몸을 낮추고 입과 코를 가린다.</li>
+        <li><b>엘리베이터를 타지 않는다</b>: 화재 시 엘리베이터는 정전이나 연기 유입으로 위험할 수 있다.</li>
+        <li><b>비상계단을 이용한다</b>: 안내된 대피 경로를 따라 이동한다.</li>
+        <li><b>집결지에서 인원 확인을 받는다</b>: 대피 후 임의로 이동하지 않고 교사의 확인을 받는다.</li>
+      </ol>
+
+      <div class="danger-box">
+        <b>절대 금지</b>
+        <p>“내 물건만 챙기고 나가야지”, “친구가 있는지 방으로 다시 들어가야지”, “엘리베이터가 더 빠르니까 타야지”라는 행동은 매우 위험하다. 대피 후 인솔교사와 구조 인력이 인원을 확인하고 대응한다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 1. 화재 상황 판단하기</h3>
+        <p>다음 상황에서 내가 해야 할 행동을 순서대로 써 봅시다.</p>
+        <div class="scenario">
+          <div class="scenario-title">상황</div>
+          <p>밤에 객실에서 쉬고 있는데 복도 쪽에서 타는 냄새가 나고, 잠시 후 화재 경보음이 울리기 시작했다. 친구 한 명은 “가방부터 챙기자”고 말한다.</p>
+          <p><b>내가 해야 할 행동:</b></p>
+          <div class="long-blank"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 비상구와 대피 경로 사전 확인</h2>
+      <p>숙소에 도착하면 객실 배정 후 반드시 비상구, 비상계단, 소화기 위치, 대피 경로를 확인해야 한다. 실제 여행에서는 숙소 도착 직후 인솔교사가 학생들과 함께 직접 보면서 안내할 예정이다.</p>
+
+      <div class="principle">
+        <div class="principle-label fire-label">원칙 2<br>경로 확인</div>
+        <div class="principle-body">
+          <b>숙소 도착 직후 “내 방에서 가장 가까운 비상구”와 “대피 후 모일 장소”를 확인한다.</b>
+          <p>화재나 정전 상황에서는 당황하여 평소처럼 판단하기 어렵다. 미리 눈으로 확인해 둔 경로가 있어야 빠르게 움직일 수 있다.</p>
+        </div>
+      </div>
+
+      <h3>숙소 도착 직후 확인할 것</h3>
+      <ul>
+        <li>우리 객실 위치와 층수</li>
+        <li>객실 문에서 가장 가까운 비상구 방향</li>
+        <li>비상계단 위치와 이동 거리</li>
+        <li>소화기, 완강기, 비상벨 위치</li>
+        <li>대피 후 집결 장소</li>
+        <li>야간에 불이 꺼져도 이동할 수 있는 복도 구조</li>
+      </ul>
+
+      <div class="activity">
+        <h3>활동 2. 우리 객실 대피 지도 작성하기</h3>
+        <p>숙소에 도착한 뒤 아래 내용을 직접 확인하여 적어 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>확인 항목</th>
+              <th>기록</th>
+            </tr>
+            <tr>
+              <td>우리 객실 번호</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>우리 객실에서 가장 가까운 비상구 방향</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>비상계단 위치</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>대피 후 집결 장소</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>소화기 또는 비상벨 위치</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="safe-box">
+        <b>기억하기</b>
+        <p>대피 경로는 “나중에 필요하면 보지”가 아니라 숙소에 도착하자마자 확인해야 하는 생명 안전 정보이다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 21시 30분 이후 무단 외출 및 객실 이동 금지</h2>
+
+      <div class="principle">
+        <div class="principle-label night-label">원칙 3<br>야간 이동 금지</div>
+        <div class="principle-body">
+          <b>21시 30분 이후에는 무단 외출과 객실 간 이동을 하지 않는다.</b>
+          <p>밤 시간대에는 학생의 위치 확인이 특히 중요하다. 교사가 학생의 위치를 정확히 파악하지 못하면 안전 관리가 어려워지고, 숙소 밖 이동은 교통사고, 길 잃음, 외부인 접촉 등 여러 위험으로 이어질 수 있다.</p>
+        </div>
+      </div>
+
+      <div class="night-box">
+        <h3>21시 30분 이후 반드시 지킬 사항</h3>
+        <ul>
+          <li>숙소 밖으로 나가지 않는다.</li>
+          <li>다른 객실에 놀러 가지 않는다.</li>
+          <li>복도에서 오래 머물거나 돌아다니지 않는다.</li>
+          <li>필요한 일이 있으면 객실에서 담임교사 또는 인솔교사에게 연락한다.</li>
+          <li>몸이 아프거나 긴급 상황이 생기면 즉시 교사에게 알린다.</li>
+        </ul>
+      </div>
+
+      <div class="danger-box">
+        <b>“잠깐이면 괜찮다”는 생각이 가장 위험하다</b>
+        <p>편의점, 자판기, 친구 방, 로비 등 가까운 곳이라도 무단 이동은 금지된다. 야간 시간대의 이동은 전체 학생의 안전 확인과 직결되므로 반드시 교사의 허락이 필요하다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 3. 야간 상황 대처하기</h3>
+        <p>다음 상황에서 적절한 행동을 써 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>상황</th>
+              <th>올바른 행동</th>
+            </tr>
+            <tr>
+              <td>21시 40분에 친구가 “잠깐 우리 방으로 와서 게임하자”고 메시지를 보냈다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>밤에 배가 아프기 시작했다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>편의점에 가고 싶어졌다.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>옆방 친구들이 너무 시끄럽다.</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 취침 시간 준수 및 생활 질서 유지</h2>
+      <p>수학여행은 일정이 연속적으로 이어지므로 충분한 수면이 다음 날 안전과 집중력을 좌우한다. 늦게까지 떠들거나 장난을 치면 본인뿐 아니라 같은 방 친구, 옆방 친구, 다른 투숙객의 휴식까지 방해하게 된다.</p>
+
+      <div class="principle">
+        <div class="principle-label night-label">원칙 4<br>취침 질서</div>
+        <div class="principle-body">
+          <b>정해진 취침 시간을 지키고, 밤 시간에는 조용히 생활한다.</b>
+          <p>잠을 충분히 자지 못하면 다음 날 버스 이동 중 멀미가 심해지거나, 체험 활동에서 집중력이 떨어지고, 작은 말다툼이 생기기 쉬워진다.</p>
+        </div>
+      </div>
+
+      <h3>취침 전 해야 할 일</h3>
+      <ul>
+        <li>다음 날 입을 옷과 준비물을 미리 정리한다.</li>
+        <li>휴대폰 충전 위치를 정하고, 취침 후 사용을 줄인다.</li>
+        <li>씻는 순서와 시간을 정해 친구와 다투지 않는다.</li>
+        <li>알람은 필요한 사람만 설정하고, 너무 큰 소리로 울리지 않게 한다.</li>
+        <li>창문, 전등, 냉난방기 사용은 같은 방 친구와 상의한다.</li>
+      </ul>
+
+      <div class="safe-box">
+        <b>좋은 객실 문화</b>
+        <p>숙소에서는 “내가 즐거운가”만 생각하지 말고 “친구도 편히 쉴 수 있는가”를 함께 생각해야 한다. 조용한 대화, 정리된 공간, 약속된 취침 시간은 좋은 공동생활의 기본이다.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. 소음과 소란 금지: 숙소는 회복의 공간</h2>
+      <p>숙소는 여행으로 인한 피로를 해소하며 친구들과 즐겁게 보낼 수 있는 공간이다. 그러나 즐거움이 소음과 소란으로 바뀌면 다른 친구와 일반 투숙객에게 피해를 준다.</p>
+
+      <div class="principle">
+        <div class="principle-label">원칙 5<br>소음 금지</div>
+        <div class="principle-body">
+          <b>객실, 복도, 로비, 식당에서 큰 소리로 떠들거나 뛰지 않는다.</b>
+          <p>복도에서의 목소리는 여러 객실로 쉽게 퍼진다. 문을 세게 닫는 소리, 뛰는 소리, 음악 소리, 영상 소리도 다른 사람에게는 큰 소음이 될 수 있다.</p>
+        </div>
+      </div>
+
+      <h3>소음이 되는 행동</h3>
+      <ul>
+        <li>복도에서 뛰거나 장난치기</li>
+        <li>방문을 세게 닫기</li>
+        <li>밤에 큰 소리로 웃거나 노래 부르기</li>
+        <li>휴대폰 영상, 음악, 게임 소리를 크게 틀기</li>
+        <li>옆방 친구를 부르기 위해 문을 두드리거나 소리치기</li>
+        <li>침대 위에서 뛰거나 베개, 물건을 던지며 장난치기</li>
+      </ul>
+
+      <div class="activity">
+        <h3>활동 4. 즐거움과 소음의 경계 찾기</h3>
+        <p>친구들과 즐겁게 지내면서도 소음을 줄일 수 있는 방법을 3가지 써 봅시다.</p>
+        <p>① <span class="short-blank"></span></p>
+        <p>② <span class="short-blank"></span></p>
+        <p>③ <span class="short-blank"></span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. 조식과 석식 시간 준수</h2>
+      <p>이번 수학여행에서는 조식과 석식을 숙소에서 하므로 식사 시간을 지키는 것이 중요하다. 식사 시간이 늦어지면 전체 일정 출발이 지연되고, 식당 운영에도 불편을 줄 수 있다.</p>
+
+      <div class="principle">
+        <div class="principle-label meal-label">원칙 6<br>식사 시간</div>
+        <div class="principle-body">
+          <b>조식과 석식 시간에 늦지 않고, 정해진 장소와 순서를 지킨다.</b>
+          <p>식사는 개인의 배고픔을 해결하는 시간일 뿐 아니라 다음 일정 준비와 전체 이동을 위한 시간이다. 정해진 시간에 식사해야 버스 출발, 관람, 체험 일정이 차질 없이 진행된다.</p>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <h3>숙소 식사 예절</h3>
+        <ul>
+          <li>정해진 시간보다 여유 있게 식당에 도착한다.</li>
+          <li>식당 안에서 뛰거나 큰 소리로 떠들지 않는다.</li>
+          <li>음식을 받을 때 순서를 지키고, 필요한 만큼만 담는다.</li>
+          <li>남은 음식이 많지 않도록 적당량을 먹는다.</li>
+          <li>식사 후 자리 주변을 정리하고, 식기를 정해진 곳에 둔다.</li>
+          <li>식사 중 몸이 불편하거나 알레르기 우려가 있으면 즉시 교사에게 알린다.</li>
+        </ul>
+      </div>
+
+      <div class="activity">
+        <h3>활동 5. 아침 식사 시간 역산하기</h3>
+        <p>아침 식사 시간이 07:30이고, 씻고 옷을 입는 데 25분, 짐 정리에 10분, 식당 이동에 5분이 필요하다고 할 때, 늦지 않으려면 늦어도 몇 시 몇 분에는 일어나야 할까요?</p>
+        <p><b>나의 계산:</b> <span class="short-blank"></span></p>
+        <p><b>이유:</b></p>
+        <div class="long-blank"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. 같은 방 친구에게 폐가 되지 않도록 청결 유지</h2>
+      <p>객실은 같은 방 친구들과 함께 쓰는 공간이다. 내 물건을 아무 곳에나 두거나, 화장실을 더럽게 쓰거나, 젖은 수건과 쓰레기를 방치하면 친구에게 불쾌감을 줄 수 있다.</p>
+
+      <div class="principle">
+        <div class="principle-label clean-label">원칙 7<br>청결 유지</div>
+        <div class="principle-body">
+          <b>객실과 화장실을 깨끗하게 사용하고, 개인 물품을 정리한다.</b>
+          <p>청결은 단순한 깔끔함의 문제가 아니라 친구를 배려하는 태도이다. 공동생활에서는 “내 물건이니까 마음대로 둔다”가 아니라 “함께 쓰는 공간이므로 정리한다”가 기본이다.</p>
+        </div>
+      </div>
+
+      <h3>객실 청결 수칙</h3>
+      <ul>
+        <li>캐리어와 가방은 정해진 위치에 둔다.</li>
+        <li>젖은 수건, 양말, 옷을 침대나 바닥에 방치하지 않는다.</li>
+        <li>쓰레기는 바로 쓰레기통에 버린다.</li>
+        <li>음식물은 객실에 오래 두지 않고, 냄새가 나지 않게 처리한다.</li>
+        <li>화장실 사용 후 물기, 머리카락, 세면도구를 정리한다.</li>
+        <li>침대, 가구, 벽, 비품을 훼손하지 않는다.</li>
+        <li>퇴실 전 객실 상태를 확인하고 두고 가는 물건이 없는지 살핀다.</li>
+      </ul>
+
+      <div class="danger-box">
+        <b>객실 비품 훼손 주의</b>
+        <p>숙소의 침구, 수건, 리모컨, 컵, 가구, 벽지 등은 개인 물건이 아니다. 파손하거나 오염시키면 배상 문제가 생길 수 있으며, 학교 전체의 신뢰에도 영향을 준다.</p>
+      </div>
+
+      <div class="activity">
+        <h3>활동 6. 객실 생활 규칙 만들기</h3>
+        <p>우리 방 친구들과 함께 지키면 좋을 객실 규칙을 5가지 만들어 봅시다.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>우리 방 규칙</th>
+            </tr>
+            <tr><td class="center">1</td><td></td></tr>
+            <tr><td class="center">2</td><td></td></tr>
+            <tr><td class="center">3</td><td></td></tr>
+            <tr><td class="center">4</td><td></td></tr>
+            <tr><td class="center">5</td><td></td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. 숙소에서 절대 하지 말아야 할 행동</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>금지 행동</th>
+            <th>왜 위험하거나 문제가 되는가?</th>
+            <th>올바른 행동</th>
+          </tr>
+          <tr>
+            <td>21시 30분 이후 무단 외출</td>
+            <td>학생 위치 확인이 어렵고, 야간 안전사고 위험이 크다.</td>
+            <td>객실에 머물며 필요한 일이 있으면 교사에게 연락한다.</td>
+          </tr>
+          <tr>
+            <td>객실 간 무단 이동</td>
+            <td>취침 질서가 무너지고 인원 확인이 어려워진다.</td>
+            <td>정해진 객실에서 생활한다.</td>
+          </tr>
+          <tr>
+            <td>복도에서 뛰거나 소리 지르기</td>
+            <td>낙상 사고와 소음 피해가 발생한다.</td>
+            <td>복도에서는 조용히 걷고 대화는 객실 안에서 낮은 목소리로 한다.</td>
+          </tr>
+          <tr>
+            <td>침대 위에서 뛰기, 물건 던지기</td>
+            <td>부상, 비품 파손, 친구와의 갈등으로 이어질 수 있다.</td>
+            <td>객실에서는 안정된 자세로 생활한다.</td>
+          </tr>
+          <tr>
+            <td>화재 경보를 장난으로 여기기</td>
+            <td>실제 비상 상황에서 대피가 늦어질 수 있다.</td>
+            <td>경보가 울리면 즉시 교사와 숙소 직원의 안내를 따른다.</td>
+          </tr>
+          <tr>
+            <td>객실을 더럽게 사용하기</td>
+            <td>같은 방 친구에게 불쾌감을 주고 위생 문제가 생긴다.</td>
+            <td>개인 물품과 쓰레기를 바로 정리한다.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. 형성평가</h2>
+      <div class="quiz">
+        <div class="quiz-item">
+          <p>화재 경보가 울리면 가방과 휴대폰을 먼저 챙긴 뒤 대피해야 한다. ( O / X )</p>
+          <p class="answer">정답: X — 물건보다 생명이 우선이며, 즉시 대피해야 한다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>숙소 도착 직후 비상구와 대피 경로를 직접 확인하는 것은 중요하다. ( O / X )</p>
+          <p class="answer">정답: O — 비상 상황에서는 미리 확인한 경로가 빠른 대피에 도움이 된다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>21시 30분 이후에도 친구 방에 잠깐 다녀오는 것은 괜찮다. ( O / X )</p>
+          <p class="answer">정답: X — 무단 객실 이동은 인원 확인과 취침 질서를 방해한다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>숙소에서 조용히 생활하는 것은 같은 방 친구뿐 아니라 다른 투숙객을 배려하는 행동이다. ( O / X )</p>
+          <p class="answer">정답: O — 숙소는 모두가 휴식하는 공동 공간이다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>조식과 석식 시간이 늦어져도 내 식사만 끝내면 전체 일정에는 영향이 없다. ( O / X )</p>
+          <p class="answer">정답: X — 식사 시간 지연은 전체 출발과 다음 일정에 영향을 준다.</p>
+        </div>
+        <div class="quiz-item">
+          <p>같은 방 친구에게 폐가 되지 않도록 청결을 유지하는 것은 공동생활 예절이다. ( O / X )</p>
+          <p class="answer">정답: O — 객실은 함께 쓰는 공간이므로 정리와 청결이 필요하다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>11. 나의 숙소 생활 체크리스트</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>점검 항목</th>
+            <th>확인</th>
+          </tr>
+          <tr>
+            <td>숙소 도착 직후 비상구, 대피 경로, 집결 장소를 확인하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>화재 경보 또는 연기 냄새가 나면 물건을 챙기지 않고 즉시 대피하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>21시 30분 이후 무단 외출과 객실 이동을 하지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>취침 시간을 지키고, 밤에는 조용히 생활하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>숙소에서 절대 소음과 소란을 일으키지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>조식과 석식 시간을 지켜 전체 일정에 차질을 주지 않겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>같은 방 친구에게 폐가 되지 않도록 객실과 화장실을 깨끗하게 사용하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+          <tr>
+            <td>숙소 비품을 훼손하지 않고, 퇴실 전 두고 가는 물건이 없는지 확인하겠다.</td>
+            <td class="center">□</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>12. 마무리 안전 다짐문</h2>
+      <div class="pledge">
+        <p>나는 수학여행 숙소가 피로를 해소하고 친구들과 즐겁게 지내는 공간이자, 여러 사람이 함께 사용하는 공동생활 공간임을 이해한다. 숙소 도착 직후 비상구와 대피 경로를 확인하고, 화재 등 비상 상황에서는 교사와 숙소 직원의 안내에 따라 신속하게 대피하겠다. 또한 21시 30분 이후 무단 외출과 객실 이동을 하지 않고, 취침 시간과 식사 시간을 지키며, 소음과 소란을 일으키지 않겠다. 같은 방 친구에게 폐가 되지 않도록 청결을 유지하고 책임 있게 생활하겠다.</p>
+        <div class="signature">
+          <div>날짜: <span></span></div>
+          <div>이름: <span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>13. 추가로 생각해 볼 질문</h2>
+      <ol>
+        <li>숙소에서의 자유로운 분위기와 공동생활 질서는 어떻게 조화를 이룰 수 있을까?</li>
+        <li>야간 무단 이동이 단순한 장난이 아니라 안전 문제로 이어지는 이유는 무엇일까?</li>
+        <li>같은 방 친구와 생활 규칙을 정할 때 가장 먼저 합의해야 할 것은 무엇일까?</li>
+        <li>화재 대피에서 “물건을 챙기지 않는 것”이 왜 중요한가?</li>
+        <li>숙소 청결과 학교의 이미지, 개인의 책임은 어떻게 연결될 수 있을까?</li>
+      </ol>
+      <p class="small">2026학년도 전주한일고등학교 1학년 수학여행</p>
+    </section>
+  </div>
+</body>
+</html>
