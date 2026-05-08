@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수학여행 안전교육 11차시 - 의복은 여행하기 편하게!</title>
+  <style>
+    :root {
+      --main: #365314;
+      --sub: #f7fee7;
+      --accent: #f97316;
+      --danger: #b91c1c;
+      --safe: #0f766e;
+      --sky: #0ea5e9;
+      --stone: #374151;
+      --gray: #f6f7f9;
+      --text: #222;
+      --line: #d9e2ec;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif; color: var(--text); background: linear-gradient(180deg, #f0f9ff 0%, #f7fee7 42%, #ffffff 100%); line-height: 1.7; }
+    .page { max-width: 980px; margin: 0 auto; padding: 34px 24px 60px; }
+    .cover { background: linear-gradient(135deg, #365314, #0ea5e9); color: white; border-radius: 24px; padding: 38px 36px; box-shadow: 0 14px 35px rgba(54, 83, 20, 0.24); position: relative; overflow: hidden; }
+    .cover::after { content: "👟 🧥 🍊"; position: absolute; right: 28px; bottom: 18px; font-size: 52px; opacity: 0.28; letter-spacing: 8px; }
+    .badge { display: inline-block; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 6px 14px; font-weight: 700; margin-bottom: 14px; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.25; letter-spacing: -0.04em; }
+    .subtitle { margin-top: 12px; font-size: 18px; opacity: 0.95; }
+    .info-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
+    .info-card { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); padding: 12px; border-radius: 16px; font-size: 14px; }
+    .info-card b { display: block; font-size: 15px; margin-bottom: 4px; }
+    section { margin-top: 30px; background: white; border: 1px solid var(--line); border-radius: 22px; padding: 26px; box-shadow: 0 8px 24px rgba(35, 55, 80, 0.06); }
+    h2 { margin: 0 0 16px; color: var(--main); font-size: 24px; letter-spacing: -0.03em; border-left: 7px solid var(--accent); padding-left: 12px; }
+    h3 { margin: 22px 0 10px; color: #365314; font-size: 19px; }
+    p { margin: 8px 0; } ul, ol { padding-left: 24px; } li { margin: 6px 0; }
+    .highlight { background: #fff7ed; border-left: 5px solid var(--accent); padding: 14px 16px; border-radius: 12px; margin: 14px 0; font-weight: 700; }
+    .principle { display: grid; grid-template-columns: 140px 1fr; gap: 14px; background: var(--sub); border: 1px solid #d9f99d; border-radius: 18px; padding: 16px; margin: 14px 0; }
+    .principle-label { font-weight: 900; color: white; background: var(--main); border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 82px; padding: 8px; }
+    .danger-label { background: var(--danger); } .safe-label { background: var(--safe); } .sky-label { background: var(--sky); } .stone-label { background: var(--stone); }
+    .principle-body b { color: #365314; }
+    .danger-box { border: 1px solid #f2b4b4; background: #fff1f1; border-radius: 16px; padding: 15px 18px; margin: 14px 0; }
+    .danger-box b { color: var(--danger); }
+    .safe-box { border: 1px solid #b9e6df; background: #effbf9; border-radius: 16px; padding: 15px 18px; margin: 14px 0; }
+    .safe-box b { color: #13766d; }
+    .jeju-box { border: 2px solid #bae6fd; background: #f0f9ff; border-radius: 18px; padding: 16px 18px; margin: 16px 0; }
+    .dress-box { border: 2px solid #fed7aa; background: #fff7ed; border-radius: 18px; padding: 16px 18px; margin: 16px 0; }
+    .activity { background: var(--gray); border: 1px dashed #aab7c4; border-radius: 18px; padding: 18px; margin: 16px 0; }
+    .long-blank { display: block; min-height: 72px; border: 1px solid #c7d0da; background: white; border-radius: 12px; margin-top: 8px; padding: 10px; }
+    .short-blank { display: inline-block; min-width: 130px; border-bottom: 2px solid #555; height: 1.2em; vertical-align: baseline; }
+    .table-wrap { overflow-x: auto; margin-top: 12px; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 14px; overflow: hidden; font-size: 15px; }
+    th { background: #365314; color: white; padding: 11px; border: 1px solid #365314; text-align: center; }
+    td { border: 1px solid #d5dde6; padding: 11px; vertical-align: top; }
+    .center { text-align: center; } .small { font-size: 13px; color: #555; }
+    .scenario { border: 1px solid #d9e2ec; border-radius: 18px; padding: 18px; margin: 14px 0; background: #ffffff; }
+    .scenario-title { font-weight: 900; color: var(--main); margin-bottom: 6px; }
+    .quiz { counter-reset: q; }
+    .quiz-item { margin: 16px 0; padding: 16px; border-radius: 16px; border: 1px solid #d9e2ec; background: #ffffff; }
+    .quiz-item::before { counter-increment: q; content: "문제 " counter(q); display: inline-block; background: var(--accent); color: #222; font-weight: 900; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; }
+    .answer { margin-top: 8px; color: #777; font-size: 14px; }
+    .pledge { background: linear-gradient(135deg, #f7fee7, #ffffff); border: 2px solid #84cc16; border-radius: 20px; padding: 22px; font-weight: 600; }
+    .signature { display: flex; justify-content: flex-end; gap: 24px; margin-top: 22px; flex-wrap: wrap; }
+    .signature span { min-width: 170px; border-bottom: 1px solid #333; display: inline-block; }
+    @media print { body { background: white; } .page { max-width: none; padding: 0; } section, .cover { box-shadow: none; break-inside: avoid; } .cover, th, .principle-label { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    @media (max-width: 760px) { .info-grid { grid-template-columns: repeat(2, 1fr); } .principle { grid-template-columns: 1fr; } h1 { font-size: 28px; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cover">
+      <div class="badge">수학여행 안전교육 11차시</div>
+      <h1>Ⅺ. 의복은 여행하기 편하게!</h1>
+      <p class="subtitle">학생 신분에 맞고, 안전하며, 제주 여행에 적합한 복장 갖추기</p>
+    </header>
+
+    <section>
+      <h2>1. 왜 수학여행 복장이 중요할까?</h2>
+      <p>수학여행 복장은 단순히 멋을 내기 위한 선택이 아니다. 수학여행은 학교 교육활동이며, 장시간 이동과 도보 활동, 숙소 생활, 공공장소 이용이 함께 이루어지는 단체 활동이다. 따라서 복장은 안전, 건강, 활동성, 학생 신분, 공동체 예절을 모두 고려해야 한다.</p>
+      <div class="highlight">수학여행 복장의 핵심은 “멋보다 안전, 개성보다 상황, 편안함 속의 단정함”이다.</div>
+      <h3>복장이 수학여행에 영향을 주는 이유</h3>
+      <ul>
+        <li>신발과 옷차림은 이동 중 넘어짐, 미끄러짐, 발목 부상과 직접 연결된다.</li>
+        <li>너무 불편한 옷은 장시간 버스 이동과 도보 활동을 어렵게 만든다.</li>
+        <li>날씨에 맞지 않는 복장은 감기, 피로, 컨디션 저하로 이어질 수 있다.</li>
+        <li>학교 단체 활동에 맞지 않는 복장은 학교의 이미지와 학생의 태도에 영향을 준다.</li>
+        <li>공동생활에서는 나의 복장이 친구와 주변 사람에게 불편함을 주지 않는지도 고려해야 한다.</li>
+      </ul>
+      <div class="safe-box"><b>기억하기</b><p>수학여행 복장은 나를 표현하는 수단이면서 동시에 나를 보호하는 장비이다. 안전하고 편한 복장은 여행을 더 오래, 더 즐겁게, 더 건강하게 즐기게 해 준다.</p></div>
+    </section>
+
+    <section>
+      <h2>2. 제주 수학여행에 맞는 복장</h2>
+      <div class="principle"><div class="principle-label sky-label">원칙 1<br>제주 맞춤</div><div class="principle-body"><b>제주의 날씨와 지형, 이동 방식을 고려한 복장을 준비한다.</b><p>제주는 바람이 강하고, 날씨가 빠르게 변할 수 있으며, 관광지에 따라 계단·언덕·해안가·현무암 지형을 걷게 될 수 있다. 따라서 예쁘지만 불편한 옷보다 활동하기 좋은 옷이 필요하다.</p></div></div>
+      <div class="jeju-box"><h3>제주 여행 복장 준비 포인트</h3><ul><li><b>바람 대비</b>: 얇은 겉옷, 바람막이, 가디건 등 준비</li><li><b>비 대비</b>: 우산 또는 우비, 젖어도 불편하지 않은 신발과 양말 준비</li><li><b>도보 이동 대비</b>: 오래 걸어도 발이 편한 운동화 착용</li><li><b>일교차 대비</b>: 아침·저녁에 입을 수 있는 여벌 옷 준비</li><li><b>숙소 생활 대비</b>: 편안한 실내복과 잠옷 준비</li><li><b>청결 대비</b>: 여벌 속옷, 양말, 세탁물 보관 봉투 준비</li></ul></div>
+      <div class="danger-box"><b>제주에서 특히 조심할 점</b><p>현무암 지형, 해안가, 계단, 비 오는 길은 미끄러울 수 있다. 사진을 찍기 위해 위험한 곳에 올라가는 행동도 위험하지만, 미끄러운 신발이나 불편한 복장은 사고 가능성을 더 키운다.</p></div>
+    </section>
+
+    <section>
+      <h2>3. 학생 신분에 맞는 의복 입기</h2>
+      <div class="principle"><div class="principle-label safe-label">원칙 2<br>학생다운 복장</div><div class="principle-body"><b>수학여행은 학교 교육활동이므로 학생 신분에 맞는 단정한 복장을 갖춘다.</b><p>수학여행은 친구들끼리 떠나는 개인 여행이 아니라 학교가 운영하는 공식 교육활동이다. 따라서 공공장소에서 우리 학교 학생으로 보였을 때 부끄럽지 않은 복장을 선택해야 한다.</p></div></div>
+      <h3>학생 신분에 맞는 복장의 기준</h3>
+      <ul><li>공공장소와 학교 단체 활동에 어울리는 단정한 옷차림</li><li>걷기, 버스 승하차, 식사, 관람, 체험 활동에 불편하지 않은 옷차림</li><li>타인에게 불쾌감을 줄 수 있는 문구, 그림, 상징이 없는 옷</li><li>고가 브랜드 과시나 친구 간 비교를 부추기지 않는 옷차림</li><li>활동 중 쉽게 흘러내리거나 정리하기 어려운 옷이 아닌 안정적인 옷차림</li></ul>
+      <div class="dress-box"><b>복장은 나의 태도를 보여 줍니다</b><p>단정한 복장은 나를 억압하는 규칙이 아니라, 학교 밖에서도 책임 있게 행동하겠다는 태도의 표현이다. 학생다운 복장은 자신과 학교를 존중하는 방식이다.</p></div>
+      <div class="activity"><h3>활동 1. 학생다운 복장 기준 만들기</h3><p>수학여행에서 학생 신분에 맞는 복장이란 어떤 모습인지 3가지 기준으로 정리해 봅시다.</p><p>① <span class="short-blank"></span></p><p>② <span class="short-blank"></span></p><p>③ <span class="short-blank"></span></p></div>
+    </section>
+
+    <section>
+      <h2>4. 하이힐 금지: 발목과 이동 안전을 지키기</h2>
+      <div class="principle"><div class="principle-label danger-label">원칙 3<br>하이힐 금지</div><div class="principle-body"><b>수학여행 중 하이힐, 굽이 높은 신발, 불안정한 신발은 착용하지 않는다.</b><p>높은 굽은 발목을 불안정하게 만들고, 장시간 걷기에 적합하지 않다. 특히 계단, 경사로, 젖은 바닥, 현무암 지형에서는 넘어지거나 발목을 접질릴 위험이 커진다.</p></div></div>
+      <h3>하이힐과 높은 굽 신발이 위험한 이유</h3>
+      <ul><li>장시간 걷기 어렵고 발 통증이 생기기 쉽다.</li><li>계단이나 버스 승하차 시 균형을 잃기 쉽다.</li><li>비가 오거나 바닥이 젖었을 때 미끄러질 위험이 크다.</li><li>발목 부상은 여행 전체 일정에 영향을 줄 수 있다.</li><li>한 학생의 부상으로 병원 이동, 교사 동행, 일정 변경이 필요할 수 있다.</li></ul>
+      <div class="safe-box"><b>추천 신발</b><p>발에 잘 맞고, 바닥이 미끄럽지 않으며, 오래 걸어도 편한 운동화가 가장 적절하다. 새 신발은 발에 물집이 생길 수 있으므로 이미 신어 본 편한 신발을 준비하는 것이 좋다.</p></div>
+    </section>
+
+    <section>
+      <h2>5. 슬리퍼 금지: 벗겨짐과 미끄러짐 예방</h2>
+      <div class="principle"><div class="principle-label danger-label">원칙 4<br>슬리퍼 금지</div><div class="principle-body"><b>수학여행 중 외부 활동에서는 슬리퍼, 쪼리, 뒤꿈치가 고정되지 않는 신발을 착용하지 않는다.</b><p>슬리퍼는 편해 보이지만 이동 중 쉽게 벗겨지고, 발을 제대로 보호하지 못한다. 버스 승하차, 공항 이동, 계단, 관광지 도보 활동에서 사고 위험이 크다.</p></div></div>
+      <h3>슬리퍼가 위험한 상황</h3>
+      <ul><li>버스에서 급히 내리다가 슬리퍼가 벗겨지는 경우</li><li>공항이나 관광지에서 사람들과 부딪혀 넘어지는 경우</li><li>계단에서 미끄러지는 경우</li><li>현무암, 자갈, 모래, 젖은 길에서 발을 다치는 경우</li><li>친구들과 이동하다 뒤처지거나 발을 삐는 경우</li></ul>
+      <div class="danger-box"><b>숙소 밖에서는 특히 금지</b><p>숙소 내부에서 정해진 범위 안에서 사용하는 실내용 슬리퍼와 외부 활동용 신발은 다르다. 숙소 밖 이동, 식당 이동, 공항·관광지 이동에서는 반드시 안전한 신발을 신어야 한다.</p></div>
+      <div class="activity"><h3>활동 2. 신발 안전 판단하기</h3><p>다음 신발이 수학여행 외부 활동에 적절한지 판단하고 이유를 써 봅시다.</p><div class="table-wrap"><table><tr><th>신발</th><th>적절한가?</th><th>이유</th></tr><tr><td>오래 신어 본 운동화</td><td class="center">예 / 아니오</td><td></td></tr><tr><td>굽이 높은 구두</td><td class="center">예 / 아니오</td><td></td></tr><tr><td>뒤꿈치가 고정되지 않는 슬리퍼</td><td class="center">예 / 아니오</td><td></td></tr><tr><td>새로 산 신발이지만 아직 오래 걸어 본 적 없음</td><td class="center">예 / 아니오</td><td></td></tr></table></div></div>
+    </section>
+
+    <section>
+      <h2>6. 노출이 심한 복장 금지</h2>
+      <div class="principle"><div class="principle-label stone-label">원칙 5<br>공동체 복장</div><div class="principle-body"><b>공공장소와 학교 단체 활동에 맞지 않는 지나친 노출 복장은 피한다.</b><p>이 기준은 학생의 개성을 부정하기 위한 것이 아니다. 수학여행이 학교 교육활동이며, 공공장소와 공동체 생활 속에서 이루어진다는 점을 고려하기 위한 것이다.</p></div></div>
+      <h3>지도 기준</h3>
+      <ul><li>활동 중 계속 신경 써야 하거나 쉽게 흘러내리는 옷은 피한다.</li><li>버스 승하차, 계단 이동, 체험 활동에 불편한 옷은 피한다.</li><li>숙소, 식당, 관광지, 공항 등 공공장소에서 단체 학생으로서 적절한 복장을 갖춘다.</li><li>다른 사람에게 불쾌감이나 부담을 줄 수 있는 지나친 노출은 피한다.</li><li>교사 안내가 있을 경우 복장을 조정할 수 있도록 여벌 옷이나 겉옷을 준비한다.</li></ul>
+      <div class="safe-box"><b>표현은 신중하게, 기준은 분명하게</b><p>복장 지도는 외모 평가가 아니라 안전과 공동체 예절을 위한 지도이다. 중요한 기준은 “학생 신분에 맞는가, 공공장소에 적절한가, 활동에 안전한가, 스스로 불편하지 않은가”이다.</p></div>
+      <div class="activity"><h3>활동 3. 복장 기준 판단하기</h3><p>다음 상황에서 왜 복장을 다시 생각해야 하는지 써 봅시다.</p><div class="scenario"><div class="scenario-title">상황</div><p>친구가 제주 관광지에서 예쁘게 사진을 찍고 싶다며 활동하기 불편하고 노출이 큰 옷을 준비했다. 바람이 강하고 계단 이동도 많은 일정이다.</p><p><b>조언할 내용:</b></p><div class="long-blank"></div></div></div>
+    </section>
+
+    <section>
+      <h2>7. 여행 가방에 꼭 챙길 의복과 준비물</h2>
+      <div class="principle"><div class="principle-label safe-label">원칙 6<br>준비 철저</div><div class="principle-body"><b>날씨, 활동, 숙소 생활, 위생을 고려해 필요한 의복을 미리 준비한다.</b><p>옷을 잘 준비하면 여행 중 불편함이 줄고, 감기나 부상도 예방할 수 있다. 반대로 준비가 부족하면 친구에게 물건을 빌리거나 일정 중 불편을 겪게 된다.</p></div></div>
+      <div class="table-wrap"><table><tr><th>구분</th><th>준비할 것</th><th>이유</th></tr><tr><td>외부 활동</td><td>편한 상·하의, 운동화, 얇은 겉옷</td><td>도보 이동과 날씨 변화에 대비하기 위해</td></tr><tr><td>비·바람 대비</td><td>바람막이, 우산 또는 우비, 여벌 양말</td><td>제주의 강한 바람과 갑작스러운 비에 대비하기 위해</td></tr><tr><td>숙소 생활</td><td>잠옷, 실내용 편한 옷, 세면 후 갈아입을 옷</td><td>휴식과 청결한 생활을 위해</td></tr><tr><td>위생</td><td>여벌 속옷, 양말, 세탁물 봉투</td><td>땀과 먼지로 인한 불쾌감과 위생 문제를 줄이기 위해</td></tr><tr><td>비상 대비</td><td>여벌 옷 1벌, 겉옷 1벌</td><td>옷이 젖거나 더러워졌을 때 대비하기 위해</td></tr></table></div>
+      <div class="dress-box"><b>짐은 가볍게, 준비는 정확하게</b><p>필요 이상으로 옷을 많이 가져오면 짐 관리가 어려워진다. 하지만 꼭 필요한 여벌 옷, 양말, 속옷, 겉옷은 부족하지 않게 준비해야 한다.</p></div>
+    </section>
+
+    <section>
+      <h2>8. 상황별 올바른 복장 선택</h2>
+      <div class="table-wrap"><table><tr><th>상황</th><th>부적절한 선택</th><th>올바른 선택</th><th>이유</th></tr><tr><td>공항과 버스를 오가며 이동한다.</td><td>슬리퍼를 신고 이동한다.</td><td>발에 잘 맞는 운동화를 신는다.</td><td>승하차와 계단 이동 중 넘어짐을 예방할 수 있다.</td></tr><tr><td>관광지에서 오래 걷는다.</td><td>굽이 높은 신발을 신는다.</td><td>쿠션감 있고 미끄럽지 않은 운동화를 신는다.</td><td>발목 부상과 발 통증을 줄일 수 있다.</td></tr><tr><td>제주에 바람이 강하게 분다.</td><td>겉옷 없이 얇은 옷만 입는다.</td><td>바람막이나 가디건을 준비한다.</td><td>체온 저하와 감기를 예방할 수 있다.</td></tr><tr><td>비 예보가 있다.</td><td>젖으면 불편한 옷과 미끄러운 신발을 준비한다.</td><td>우천 대비 물품과 여벌 양말을 준비한다.</td><td>젖은 상태로 이동하면 불편하고 건강에 좋지 않다.</td></tr><tr><td>학교 단체 활동으로 관광지를 방문한다.</td><td>지나치게 노출이 크거나 활동에 불편한 옷을 입는다.</td><td>단정하고 활동하기 편한 옷을 입는다.</td><td>학생 신분과 공공장소 예절을 고려해야 한다.</td></tr><tr><td>숙소에서 하루 일정을 마친다.</td><td>외부 활동복 그대로 잠든다.</td><td>씻고 편한 실내복이나 잠옷으로 갈아입는다.</td><td>개인 위생과 충분한 휴식을 위해 필요하다.</td></tr></table></div>
+    </section>
+
+    <section>
+      <h2>9. 형성평가</h2>
+      <div class="quiz"><div class="quiz-item"><p>수학여행 복장은 안전, 활동성, 학생 신분, 공공 예절을 함께 고려해야 한다. ( O / X )</p><p class="answer">정답: O — 수학여행은 학교 교육활동이자 단체 활동이다.</p></div><div class="quiz-item"><p>하이힐이나 굽이 높은 신발은 사진이 예쁘게 나오므로 장시간 도보 일정에도 적절하다. ( O / X )</p><p class="answer">정답: X — 발목 부상과 넘어짐 위험이 커진다.</p></div><div class="quiz-item"><p>슬리퍼는 편하므로 공항, 버스, 관광지 이동 시 외부 활동용으로 적절하다. ( O / X )</p><p class="answer">정답: X — 쉽게 벗겨지고 발을 보호하지 못해 위험하다.</p></div><div class="quiz-item"><p>노출이 심한 복장을 피하라는 것은 개성을 부정하려는 것이 아니라 학교 단체 활동과 공공장소를 고려한 지도이다. ( O / X )</p><p class="answer">정답: O — 안전, 활동성, 공동체 예절을 위한 기준이다.</p></div><div class="quiz-item"><p>제주 여행에서는 바람과 비, 일교차를 고려해 얇은 겉옷과 여벌 옷을 준비하는 것이 좋다. ( O / X )</p><p class="answer">정답: O — 날씨 변화에 대비하면 건강과 컨디션을 지킬 수 있다.</p></div><div class="quiz-item"><p>새 신발은 예쁘기만 하면 오래 걸어 본 적이 없어도 수학여행에 적절하다. ( O / X )</p><p class="answer">정답: X — 물집과 발 통증이 생길 수 있으므로 이미 신어 본 편한 신발이 좋다.</p></div></div>
+    </section>
+
+    <section>
+      <h2>10. 나의 수학여행 복장 체크리스트</h2>
+      <div class="table-wrap"><table><tr><th>점검 항목</th><th>확인</th></tr><tr><td>학생 신분에 맞는 단정한 복장을 준비하겠다.</td><td class="center">□</td></tr><tr><td>하이힐, 굽이 높은 신발, 불안정한 신발은 착용하지 않겠다.</td><td class="center">□</td></tr><tr><td>슬리퍼, 쪼리, 뒤꿈치가 고정되지 않는 신발은 외부 활동 시 착용하지 않겠다.</td><td class="center">□</td></tr><tr><td>발에 잘 맞고 오래 걸어도 편한 운동화를 준비하겠다.</td><td class="center">□</td></tr><tr><td>노출이 심하거나 활동에 불편한 복장은 피하겠다.</td><td class="center">□</td></tr><tr><td>제주의 바람과 비, 일교차에 대비해 겉옷과 여벌 옷을 준비하겠다.</td><td class="center">□</td></tr><tr><td>여벌 속옷, 양말, 세탁물 봉투 등 위생용 의복 준비를 하겠다.</td><td class="center">□</td></tr><tr><td>복장 선택에서 멋뿐 아니라 안전과 공동체 예절을 함께 고려하겠다.</td><td class="center">□</td></tr></table></div>
+    </section>
+
+    <section>
+      <h2>11. 마무리 복장 다짐문</h2>
+      <div class="pledge"><p>나는 수학여행이 학교 교육활동이자 단체 활동임을 이해하고, 학생 신분에 맞는 단정하고 안전한 복장을 갖추겠다. 하이힐, 굽이 높은 신발, 슬리퍼처럼 이동 중 위험할 수 있는 신발은 착용하지 않고, 오래 걸어도 편한 운동화를 준비하겠다. 또한 노출이 심하거나 활동에 불편한 복장은 피하고, 제주도의 바람과 비, 일교차에 대비하여 겉옷과 여벌 옷을 준비하겠다. 나는 복장을 통해 나 자신을 보호하고, 친구와 공동체를 배려하며, 학교 밖에서도 책임 있는 학생으로 행동하겠다.</p><div class="signature"><div>날짜: <span></span></div><div>이름: <span></span></div></div></div>
+    </section>
+
+    <section>
+      <h2>12. 추가로 생각해 볼 질문</h2>
+      <ol><li>수학여행에서 복장이 안전과 연결되는 이유는 무엇일까?</li><li>학생 신분에 맞는 복장을 갖춘다는 것은 단순히 규칙을 지키는 것 이상의 어떤 의미가 있을까?</li><li>제주도의 바람, 비, 현무암 지형을 고려할 때 가장 중요한 준비물은 무엇일까?</li><li>복장 선택에서 개성과 공동체 예절은 어떻게 조화를 이룰 수 있을까?</li><li>내가 친구에게 안전한 복장을 조언해야 한다면 어떤 말로 표현할 수 있을까?</li></ol>
+      <p class="small">2026학년도 전주한일고등학교 1학년 수학여행</p>
+    </section>
+  </div>
+</body>
+</html>
